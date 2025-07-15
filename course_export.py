@@ -3,9 +3,9 @@ import os
 import pandas as pd
 import logging
 import re
+import sys
 
 from typing import List, Tuple
-from dotenv import find_dotenv, load_dotenv
 from selenium import webdriver
 from selenium.common.exceptions import (
     NoSuchElementException,
@@ -24,22 +24,31 @@ from constants import (
     INSTRUCTOR_LOGIN_PASSWORD,
     PAGELOAD_TIMEOUT,
     WEBDRIVER_TIMEOUT,
-    DOWNLOADS_DIR,
     LOGS_DIR,
     DATA_DIR,
+    CSV_DATA_DIR,
+    MD_DATA_DIR,
+    validate_setup,
 )
 
-os.makedirs(LOGS_DIR, exist_ok=True)
 
-log_file = os.path.join(LOGS_DIR, "course_export.log")
+if not validate_setup():
+    print("Setup validation failed. Please check your environment and try again.")
+    exit(1)
+else:
+    print("Setup validation passed. Proceeding with course export...")
+
+log_file = LOGS_DIR / "course_export.log"
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler(log_file, mode="w"), logging.StreamHandler()],
+    handlers=[
+        logging.FileHandler(str(log_file), mode="w"),
+        logging.StreamHandler(sys.stdout),
+    ],
+    encoding="utf-8",
 )
 logger = logging.getLogger(__name__)
-
-load_dotenv(find_dotenv(filename=".env.development", usecwd=True))
 
 _course_names: List[str] = []
 _course_ids: List[str] = []
@@ -52,12 +61,28 @@ options = Options()
 options.add_experimental_option(
     "prefs",
     {
-        "download.default_directory": DOWNLOADS_DIR,  # Set download folder
+        "download.default_directory": str(
+            DATA_DIR
+        ),  # Use project data directory instead of system Downloads
         "download.prompt_for_download": False,  # Disable download pop-ups
         "download.directory_upgrade": True,
         "safebrowsing.enabled": True,  # Allow safe browsing downloads
     },
 )
+options.add_argument("--disable-gpu")  # Disable GPU hardware acceleration
+options.add_argument("--no-sandbox")  # Bypass OS security model
+options.add_argument("--headless")  # Run in headless mode for automation
+options.add_argument("--window-size=1920,1080")  # Set window size for headless mode
+options.add_argument("--disable-web-security")
+options.add_argument("--disable-features=VizDisplayCompositor")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-background-networking")
+options.add_argument("--disable-sync")
+
+options.add_argument("--log-level=3")  # Only show fatal errors
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+options.add_experimental_option("useAutomationExtension", False)
+
 logger.info("Initializing Chrome WebDriver...")
 browser = webdriver.Chrome(options=options)
 wait = WebDriverWait(browser, WEBDRIVER_TIMEOUT)
@@ -87,7 +112,7 @@ def navigate_to_login():
 def send_username():
     try:
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys(INSTRUCTOR_LOGIN_ID + Keys.RETURN)
+        username.send_keys(INSTRUCTOR_LOGIN_ID + Keys.ENTER)
     except NoSuchElementException:
         logger.error("Username field not found. Exiting...")
         browser.close()
@@ -97,7 +122,7 @@ def send_username():
 def send_password():
     try:
         password = wait.until(EC.presence_of_element_located((By.ID, "password")))
-        password.send_keys(INSTRUCTOR_LOGIN_PASSWORD + Keys.RETURN)
+        password.send_keys(INSTRUCTOR_LOGIN_PASSWORD + Keys.ENTER)
     except NoSuchElementException:
         logger.error("Password field not found. Exiting...")
         browser.close()
@@ -105,17 +130,40 @@ def send_password():
 
 
 def clear_old_downloads():
-    """Deletes all CSV files in the downloads folder before new exports starts."""
+    """Deletes old CSV and Markdown files before new exports start."""
 
     try:
+        # Clear CSV files
         pattern = r"^GRADEBOOK_DATA_\d{4}_\d{2}_\d{2}T\d{2}_\d{2}_\d{2}Z_[\w-]+\.csv$"
-        for file in os.listdir(DOWNLOADS_DIR):
+
+        # Clear from main DATA_DIR (downloaded files)
+        for file in os.listdir(str(DATA_DIR)):
             if file.endswith(".csv") and re.match(pattern, file):
-                file_path = os.path.join(DOWNLOADS_DIR, file)
-                os.remove(file_path)
+                file_path = DATA_DIR / file
+                os.remove(str(file_path))
                 logger.info(f"Deleted old download: {file_path}")
+
+        # Clear organized CSV files
+        if CSV_DATA_DIR.exists():
+            for file in os.listdir(str(CSV_DATA_DIR)):
+                if file.endswith(".csv") and re.match(pattern, file):
+                    file_path = CSV_DATA_DIR / file
+                    os.remove(str(file_path))
+                    logger.info(f"Deleted old CSV export: {file_path}")
+
+        # Clear Markdown files
+        if MD_DATA_DIR.exists():
+            md_pattern = (
+                r"^GRADEBOOK_DATA_\d{4}_\d{2}_\d{2}T\d{2}_\d{2}_\d{2}Z_[\w-]+\.md$"
+            )
+            for file in os.listdir(str(MD_DATA_DIR)):
+                if file.endswith(".md") and re.match(md_pattern, file):
+                    file_path = MD_DATA_DIR / file
+                    os.remove(str(file_path))
+                    logger.info(f"Deleted old Markdown export: {file_path}")
+
     except Exception as e:
-        logger.error(f"Error deleting old downloads: {e}", exc_info=True)
+        logger.error(f"Error clearing old files: {e}", exc_info=True)
 
 
 def close_modal_if_present():
@@ -138,23 +186,232 @@ def close_modal_if_present():
         logger.info("No modal detected.")
 
 
-def add_course_id_to_csv(csv_filename: str, course_id: str):
-    """Adds a COURSE_ID column to the CSV file."""
+def create_markdown_export(
+    df: pd.DataFrame, csv_filename: str, course_id: str, course_name: str
+) -> tuple[bool, str]:
+    """
+    Creates a Markdown file from the gradebook data with better formatting.
 
-    file_path = os.path.join(DOWNLOADS_DIR, csv_filename)
-    if not os.path.exists(file_path):
+    Args:
+        df: DataFrame containing the gradebook data
+        csv_filename: Original CSV filename
+        course_id: Course ID
+        course_name: Course name
+
+    Returns:
+        tuple: (success: bool, file_path: str)
+    """
+    try:
+        # Create markdown filename
+        md_filename = csv_filename.replace(".csv", ".md")
+        md_file_path = MD_DATA_DIR / md_filename
+
+        # Generate markdown content
+        markdown_content = generate_gradebook_markdown(df, course_id, course_name)
+
+        # Write markdown file
+        with open(md_file_path, "w", encoding="utf-8") as f:
+            f.write(markdown_content)
+
+        logger.info(f"Markdown export saved to: {md_file_path}")
+        return True, str(md_file_path)
+
+    except Exception as e:
+        logger.error(f"Error creating Markdown export: {e}")
+        return False, ""
+
+
+def generate_gradebook_markdown(
+    df: pd.DataFrame, course_id: str, course_name: str
+) -> str:
+    """
+    Generates formatted Markdown content from gradebook data optimized for LLM consumption.
+
+    Args:
+        df: DataFrame containing gradebook data
+        course_id: Course ID
+        course_name: Course name
+
+    Returns:
+        str: Formatted Markdown content
+    """
+    from datetime import datetime
+
+    # Header information
+    export_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    total_students = len(df)
+
+    markdown_lines = [
+        f"# NetAcad Gradebook Export",
+        "",
+        f"## Course Information",
+        f"- **Course ID:** {course_id}",
+        f"- **Course Name:** {course_name}",
+        f"- **Export Date:** {export_date}",
+        f"- **Total Students:** {total_students}",
+        "",
+        "---",
+        "",
+    ]
+
+    # Add summary statistics if numeric columns exist
+    numeric_columns = df.select_dtypes(include=["number"]).columns.tolist()
+    if len(numeric_columns) > 1:  # More than just COURSE_ID
+        markdown_lines.extend(
+            [
+                "## Grade Summary Statistics",
+                "",
+                "This section provides statistical analysis of student performance across gradeable items.",
+                "",
+            ]
+        )
+
+        for col in numeric_columns:
+            if col != "COURSE_ID" and not df[col].empty and not df[col].isna().all():
+                stats = df[col].describe()
+                # Clean column name for display
+                display_name = col.replace("_", " ").replace("-", " ").title()
+
+                markdown_lines.extend(
+                    [
+                        f"### {display_name}",
+                        (
+                            f"- **Average Score:** {stats['mean']:.2f}"
+                            if "mean" in stats
+                            else ""
+                        ),
+                        (
+                            f"- **Minimum Score:** {stats['min']:.2f}"
+                            if "min" in stats
+                            else ""
+                        ),
+                        (
+                            f"- **Maximum Score:** {stats['max']:.2f}"
+                            if "max" in stats
+                            else ""
+                        ),
+                        (
+                            f"- **Standard Deviation:** {stats['std']:.2f}"
+                            if "std" in stats
+                            else ""
+                        ),
+                        (
+                            f"- **Students with Grades:** {int(stats['count'])}"
+                            if "count" in stats
+                            else ""
+                        ),
+                        "",
+                    ]
+                )
+
+        markdown_lines.extend(["---", ""])
+
+    # Add the main data table with clear headers
+    markdown_lines.extend(
+        [
+            "## Complete Student Gradebook Data",
+            "",
+            "Below is the complete gradebook data for all students in this course.",
+            "Each row represents one student's performance across all gradeable items.",
+            "",
+        ]
+    )
+
+    # Convert DataFrame to Markdown table with improved formatting
+    display_df = df.copy()
+
+    # Clean up column names for better LLM understanding
+    column_mapping = {}
+    for col in display_df.columns:
+        clean_name = col.replace("_", " ").replace("-", " ").title()
+        # Special handling for common patterns
+        if "id" in col.lower():
+            clean_name = clean_name.replace("Id", "ID")
+        column_mapping[col] = clean_name
+
+    display_df = display_df.rename(columns=column_mapping)
+
+    # Convert to markdown table
+    markdown_table = display_df.to_markdown(index=False, tablefmt="pipe")
+    markdown_lines.append(markdown_table)
+
+    # Add metadata footer for LLM context
+    markdown_lines.extend(
+        [
+            "",
+            "---",
+            "",
+            "## Export Metadata",
+            "",
+            f"- **Generated:** {export_date}",
+            f"- **Data Source:** NetAcad Learning Management Platform",
+            f"- **Processing System:** Automated Course Export Tool",
+            f"- **File Format:** Markdown (.md) - Optimized for AI/LLM Processing",
+            f"- **CSV Companion:** Available in separate headerless CSV format",
+            "",
+            "### Data Notes",
+            "- All numeric scores are preserved in original format",
+            "- Missing grades are represented as empty cells or NaN values",
+            "- Course ID has been prepended to maintain data integrity",
+            "- Column headers have been formatted for improved readability",
+        ]
+    )
+
+    return "\n".join(markdown_lines)
+
+
+def add_course_id_to_csv(
+    csv_filename: str, course_id: str, course_name: str = ""
+) -> tuple[bool, str, str]:
+    """
+    Adds a COURSE_ID column to the CSV file and creates both CSV and Markdown versions.
+
+    Args:
+        csv_filename: Name of the CSV file
+        course_id: Course ID to add to the data
+        course_name: Course name for better organization
+
+    Returns:
+        tuple: (success: bool, csv_file_path: str, markdown_file_path: str)
+    """
+    # Original downloaded file in DATA_DIR
+    original_file_path = DATA_DIR / csv_filename
+
+    if not original_file_path.exists():
         logger.error(f"CSV file not found: {csv_filename}")
-        return False
+        return False, "", ""
 
     try:
-        df = pd.read_csv(file_path)
+        # Read the original CSV
+        df = pd.read_csv(str(original_file_path))
         df.insert(0, "COURSE_ID", course_id)
-        df.to_csv(file_path, index=False)
-        logger.info(f"Added COURSE_ID column to {file_path}")
-        return True
+
+        # Create organized CSV file (without headers for platform compatibility)
+        csv_output_path = CSV_DATA_DIR / csv_filename
+        df.to_csv(str(csv_output_path), index=False, header=False)
+        logger.info(f"CSV file (no headers) saved to: {csv_output_path}")
+
+        # Create Markdown version (with headers for LLM readability)
+        markdown_success, markdown_path = create_markdown_export(
+            df, csv_filename, course_id, course_name
+        )
+
+        if markdown_success:
+            logger.info(f"Successfully processed both formats for {course_name}")
+            # Clean up the original downloaded file
+            original_file_path.unlink()
+            logger.info(f"Cleaned up original download: {original_file_path}")
+
+            return True, str(csv_output_path), markdown_path
+        else:
+            logger.warning(
+                f"Markdown creation failed, but CSV was successful for {course_name}"
+            )
+            return True, str(csv_output_path), ""
+
     except Exception as e:
-        logger.error(f"Error updating CSV file: {e}")
-        return False
+        logger.error(f"Error processing file {csv_filename}: {e}")
+        return False, "", ""
 
 
 def wait_for_download(download_path: str, timeout=30):
@@ -291,7 +548,7 @@ def click_first_export():
         try:
             latest_export_link.click()
             # Wait for file download to complete
-            csv_filename = wait_for_download(DOWNLOADS_DIR)
+            csv_filename = wait_for_download(str(DATA_DIR))
             if csv_filename:
                 logger.info(f"Downloaded file: {csv_filename}")
                 return csv_filename
@@ -340,7 +597,7 @@ def handle_gradebook_tab():
         logger.error("Gradebook tab not found.")
 
 
-def execute_gradebook_actions(course_id: str):
+def execute_gradebook_actions(course_id: str, course_name: str = ""):
     try:
         logger.info(f"Starting gradebook actions for Course ID: {course_id}")
         handle_gradebook_tab()
@@ -357,11 +614,19 @@ def execute_gradebook_actions(course_id: str):
 
         csv_filename = click_first_export()
 
-        _course_csv_files.append(os.path.join(DOWNLOADS_DIR, csv_filename))
-
         if csv_filename:
-            add_course_id_to_csv(csv_filename, course_id)
-            return True
+            # Process the file and get both CSV and Markdown paths
+            success, csv_path, markdown_path = add_course_id_to_csv(
+                csv_filename, course_id, course_name
+            )
+            if success:
+                # Store both file paths for tracking
+                _course_csv_files.append(f"CSV: {csv_path} | MD: {markdown_path}")
+                logger.info(f"Successfully processed both formats for {course_name}")
+                return True
+            else:
+                logger.error(f"Failed to process files for course {course_id}")
+                return False
         else:
             logger.error(f"Failed to export grades for course {course_id}")
             return False
@@ -375,21 +640,35 @@ def execute_gradebook_actions(course_id: str):
 
 
 def save_courses_data_to_json():
-    course_data = [
-        {
-            "course_id": course_id,
-            "course_name": course_name,
-            "csv_filename": csv_filename,
-        }
-        for course_id, course_name, csv_filename in zip(
-            _course_ids, _course_names, _course_csv_files
+    """Save course processing results to JSON with file path information."""
+    course_data = []
+
+    for i, (course_id, course_name) in enumerate(zip(_course_ids, _course_names)):
+        # Parse the file paths from the stored string
+        file_info = _course_csv_files[i] if i < len(_course_csv_files) else ""
+
+        csv_path = ""
+        markdown_path = ""
+
+        if file_info and " | " in file_info:
+            parts = file_info.split(" | ")
+            csv_path = parts[0].replace("CSV: ", "") if len(parts) > 0 else ""
+            markdown_path = parts[1].replace("MD: ", "") if len(parts) > 1 else ""
+
+        course_data.append(
+            {
+                "course_id": course_id,
+                "course_name": course_name,
+                "csv_file_path": csv_path,
+                "markdown_file_path": markdown_path,
+                "processing_status": "success" if file_info else "failed",
+            }
         )
-    ]
 
     df = pd.DataFrame(course_data)
-    json_path = os.path.join(DATA_DIR, "courses.json")
-    os.makedirs(os.path.dirname(json_path), exist_ok=True)
-    df.to_json(json_path, orient="records", indent=4)
+    json_path = DATA_DIR / "courses_export_summary.json"
+    df.to_json(str(json_path), orient="records", indent=4)
+    logger.info(f"Course export summary saved to: {json_path}")
 
 
 def paginate_and_fetch_courses() -> Tuple[List[str], List[str]]:
@@ -437,17 +716,20 @@ def paginate_and_fetch_courses() -> Tuple[List[str], List[str]]:
     return list(course_urls), list(course_names)
 
 
-def process_courses(clear_old_downloads: bool = True):
+def process_courses(clear_downloads: bool = True):
     """Processes each course, navigates to its page, and exports its gradebook."""
     start_time = time.time()
-    logger.info("Clearing old downloads...")
-    if clear_old_downloads:
+
+    if clear_downloads:
+        logger.info("Clearing old downloads...")
         clear_old_downloads()
+
     navigate_to_login()
     send_username()
     send_password()
 
     course_urls, course_names = paginate_and_fetch_courses()
+
     for i, url in enumerate(course_urls):
         print(url)
         if url:
@@ -464,20 +746,38 @@ def process_courses(clear_old_downloads: bool = True):
 
             browser.get(url)
 
-            if execute_gradebook_actions(course_id):
+            if execute_gradebook_actions(course_id, course_name):
                 logger.info(f"✅ Successfully exported grades for course {course_name}")
             else:
-                logger.error(f"❌ Failed to export grades for course {course_name}")
+                logger.warning(f"Failed to export grades for course {course_name}")
 
             logger.info("-" * 50)
 
     logger.info(f"Length of Course Ids processed: {len(_course_ids)}")
     logger.info(f"Length of Course Names processed: {len(_course_names)}")
+
+    # Summary of file exports
+    successful_exports = sum(1 for file_info in _course_csv_files if file_info)
+    failed_exports = len(_course_ids) - successful_exports
+
+    logger.info("=" * 60)
+    logger.info("EXPORT SUMMARY")
+    logger.info("=" * 60)
+    logger.info(f"📊 Total Courses Processed: {len(_course_ids)}")
+    logger.info(f"✅ Successful Exports: {successful_exports}")
+    logger.info(f"❌ Failed Exports: {failed_exports}")
+    logger.info(f"📁 CSV Files Location: {CSV_DATA_DIR}")
+    logger.info(f"📝 Markdown Files Location: {MD_DATA_DIR}")
+
+    if _failed_course_ids:
+        logger.warning(f"⚠️  Failed Course IDs: {', '.join(_failed_course_ids)}")
+
     browser.quit()
     save_courses_data_to_json()
     end_time = time.time()
     elapsed_time = end_time - start_time
     logger.info(f"Program execution completed in {elapsed_time:.2f} seconds.")
+    logger.info("=" * 60)
 
 
 # List of courses Anthony and Jeff care about
