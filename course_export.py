@@ -15,14 +15,15 @@ from selenium.common.exceptions import (
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 from constants import (
     BASE_URL,
     INSTRUCTOR_LOGIN_ID,
     INSTRUCTOR_LOGIN_PASSWORD,
-    PAGELOAD_TIMEOUT,
     WEBDRIVER_TIMEOUT,
     LOGS_DIR,
     DATA_DIR,
@@ -42,11 +43,7 @@ log_file = LOGS_DIR / "course_export.log"
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[
-        logging.FileHandler(str(log_file), mode="w"),
-        logging.StreamHandler(sys.stdout),
-    ],
-    encoding="utf-8",
+    handlers=[logging.FileHandler(str(log_file), mode="w"), logging.StreamHandler()],
 )
 logger = logging.getLogger(__name__)
 
@@ -57,7 +54,19 @@ _failed_course_ids: List[str] = []
 
 
 options = Options()
-#  # Enable new headless mode for better support
+options.add_argument("--disable-gpu")  # Disable GPU hardware acceleration
+options.add_argument("--no-sandbox")  # Bypass OS security model
+options.add_argument("--headless")  # Run in headless mode for automation
+options.add_argument("--window-size=1920,1080")  # Set window size for headless mode
+options.add_argument("--disable-web-security")
+options.add_argument("--disable-features=VizDisplayCompositor")
+options.add_argument("--disable-dev-shm-usage")
+options.add_argument("--disable-background-networking")
+options.add_argument("--disable-sync")
+
+options.add_argument("--log-level=3")  # Only show fatal errors
+options.add_experimental_option("excludeSwitches", ["enable-logging"])
+options.add_experimental_option("useAutomationExtension", False)
 options.add_experimental_option(
     "prefs",
     {
@@ -84,7 +93,8 @@ options.add_experimental_option("excludeSwitches", ["enable-logging"])
 options.add_experimental_option("useAutomationExtension", False)
 
 logger.info("Initializing Chrome WebDriver...")
-browser = webdriver.Chrome(options=options)
+service = Service(ChromeDriverManager().install())
+browser = webdriver.Chrome(service=service, options=options)
 wait = WebDriverWait(browser, WEBDRIVER_TIMEOUT)
 
 browser.delete_all_cookies()

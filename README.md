@@ -5,9 +5,14 @@ Welcome to the NetAcad project!
 ## Overview
 
 This repository contains resources, code, and documentation related to the NetAcad project. The goal is to support the Cisco Small Business Training Team to extract gradebook data as needed.
+This repository contains resources, code, and documentation related to the NetAcad project. The goal is to support the Cisco Small Business Training Team to extract gradebook data as needed.
 
 ## Features
 
+- Automatic .env file creation
+- Automatic directory creation for logs, data, and downloads
+- Automatic ChromeDriver management via Selenium
+- Automatic Gradebook data extraction
 - Automatic .env file creation
 - Automatic directory creation for logs, data, and downloads
 - Automatic ChromeDriver management via Selenium
@@ -24,6 +29,21 @@ This repository contains resources, code, and documentation related to the NetAc
 ### Setup Instructions
 
 1. **Clone the repository:**
+
+### Prerequisites
+
+- Python 3.11+
+- Google Chrome browser
+- ChromeDriver (will be automatically managed by Selenium)
+
+### Setup Instructions
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/jorcleme/netacad.git
+   cd netacad
+   ```
 
    ```bash
    git clone https://github.com/jorcleme/netacad.git
@@ -179,5 +199,7 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 This project is licensed under the MIT License.
 
 ---
+
+_Created by the SMBDev team._
 
 _Created by the SMBDev team._

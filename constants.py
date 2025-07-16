@@ -66,8 +66,8 @@ if not INSTRUCTOR_LOGIN_ID or not INSTRUCTOR_LOGIN_PASSWORD:
             "It looks like you're using template values. Please update with your actual credentials."
         )
 
-PAGELOAD_TIMEOUT = 5
-WEBDRIVER_TIMEOUT = 10
+
+WEBDRIVER_TIMEOUT = 20
 
 
 # Create required directories with error handling
@@ -129,21 +129,3 @@ def validate_setup():
     else:
         print("✅ All directories and configuration validated successfully!")
         return True
-
-
-# Export all necessary constants for easy importing
-__all__ = [
-    "BASE_URL",
-    "LOGIN_ID",
-    "INSTRUCTOR_LOGIN_ID",
-    "INSTRUCTOR_LOGIN_PASSWORD",
-    "PAGELOAD_TIMEOUT",
-    "WEBDRIVER_TIMEOUT",
-    "LOGS_DIR",
-    "DATA_DIR",
-    "CSV_DATA_DIR",
-    "MD_DATA_DIR",
-    "create_env_template",
-    "create_directory_safely",
-    "validate_setup",
-]
