@@ -73,11 +73,11 @@ env_file_path = find_dotenv(filename='.env.development', usecwd=True)
 load_dotenv(env_file_path)
 
 # Check if credentials are set and not default values
-instructor_login = os.environ.get('INSTRUCTOR_LOGIN', '')
+instructor_id = os.environ.get('INSTRUCTOR_ID', '')
 instructor_password = os.environ.get('INSTRUCTOR_PASSWORD', '')
 
-if (not instructor_login or not instructor_password or 
-    instructor_login == 'your_instructor_email@domain.com' or 
+if (not instructor_id or not instructor_password or
+    instructor_id == 'your_instructor_email@domain.com' or
     instructor_password == 'your_password'):
     print('\n⚠️  NetAcad credentials not configured or using default values.')
     sys.exit(1)
@@ -98,7 +98,7 @@ if [ $? -ne 0 ]; then
   # Update .env.development file
   cat > .env.development << EOF
 # Instructor login credentials for NetAcad
-INSTRUCTOR_LOGIN="$instructor_email"
+INSTRUCTOR_ID="$instructor_email"
 INSTRUCTOR_PASSWORD="$instructor_password"
 EOF
   

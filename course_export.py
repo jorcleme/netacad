@@ -17,11 +17,13 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 
 from constants import (
     BASE_URL,
-    INSTRUCTOR_LOGIN_ID,
-    INSTRUCTOR_LOGIN_PASSWORD,
+    INSTRUCTOR_ID,
+    INSTRUCTOR_PASSWORD,
     PAGELOAD_TIMEOUT,
     WEBDRIVER_TIMEOUT,
     LOGS_DIR,
@@ -43,7 +45,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler(str(log_file), mode="w"),
+        logging.FileHandler(str(log_file), mode="w", encoding="utf-8"),
         logging.StreamHandler(sys.stdout),
     ],
     encoding="utf-8",
@@ -84,7 +86,9 @@ options.add_experimental_option("excludeSwitches", ["enable-logging"])
 options.add_experimental_option("useAutomationExtension", False)
 
 logger.info("Initializing Chrome WebDriver...")
-browser = webdriver.Chrome(options=options)
+browser = webdriver.Chrome(
+    options=options, service=ChromeService(ChromeDriverManager().install())
+)
 wait = WebDriverWait(browser, WEBDRIVER_TIMEOUT)
 
 browser.delete_all_cookies()
@@ -112,7 +116,7 @@ def navigate_to_login():
 def send_username():
     try:
         username = wait.until(EC.presence_of_element_located((By.ID, "username")))
-        username.send_keys(INSTRUCTOR_LOGIN_ID + Keys.ENTER)
+        username.send_keys(INSTRUCTOR_ID + Keys.ENTER)
     except NoSuchElementException:
         logger.error("Username field not found. Exiting...")
         browser.close()
@@ -122,7 +126,7 @@ def send_username():
 def send_password():
     try:
         password = wait.until(EC.presence_of_element_located((By.ID, "password")))
-        password.send_keys(INSTRUCTOR_LOGIN_PASSWORD + Keys.ENTER)
+        password.send_keys(INSTRUCTOR_PASSWORD + Keys.ENTER)
     except NoSuchElementException:
         logger.error("Password field not found. Exiting...")
         browser.close()
@@ -674,8 +678,8 @@ def save_courses_data_to_json():
 def paginate_and_fetch_courses() -> Tuple[List[str], List[str]]:
     """Cycles through all pages and collects course URLs and names."""
 
-    course_urls = set()
-    course_names = set()
+    course_urls: List[str] = []
+    course_names: List[str] = []
 
     i = 0
     while True:
@@ -689,8 +693,8 @@ def paginate_and_fetch_courses() -> Tuple[List[str], List[str]]:
             )
         )
         for anchor in course_anchors:
-            course_urls.add(anchor.get_attribute("href"))
-            course_names.add(anchor.text.strip())
+            course_urls.append(anchor.get_attribute("href"))
+            course_names.append(anchor.text.strip())
 
         # Try to find and click the next button.
         try:
@@ -711,9 +715,16 @@ def paginate_and_fetch_courses() -> Tuple[List[str], List[str]]:
             browser.execute_script("arguments[0].scrollIntoView(true);", btn)
             browser.execute_script("arguments[0].click();", btn)
 
-    logger.info(f"Total course names collected: {len(course_names)}")
-    logger.info(f"Total course URLs collected: {len(course_urls)}")
-    return list(course_urls), list(course_names)
+    logger.info(
+        f"Total course names collected: {len(course_names)}\nTotal URLs: {len(course_urls)}"
+    )
+
+    if len(course_urls) != len(course_names):
+        logger.warning(
+            "Mismatch between course URLs and names. Please check the page structure."
+        )
+
+    return (course_urls, course_names)
 
 
 def process_courses(clear_downloads: bool = True):

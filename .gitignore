@@ -13,6 +13,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+/data/csv/*.csv
+/data/markdown/*.md
+
 spanning-content-tree/backend/data/config.json
 
 backend/data/config.json

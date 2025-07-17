@@ -69,11 +69,11 @@ env_file_path = find_dotenv(filename='.env.development', usecwd=True)
 load_dotenv(env_file_path)
 
 # Check if credentials are set and not default values
-instructor_login = os.environ.get('INSTRUCTOR_LOGIN', '')
+instructor_id = os.environ.get('INSTRUCTOR_ID', '')
 instructor_password = os.environ.get('INSTRUCTOR_PASSWORD', '')
 
-if (not instructor_login or not instructor_password or 
-    instructor_login == 'your_instructor_email@domain.com' or 
+if (not instructor_id or not instructor_password or
+    instructor_id == 'your_instructor_email@domain.com' or
     instructor_password == 'your_password'):
     print('\n  NetAcad credentials not configured or using default values.')
     sys.exit(1)
@@ -94,7 +94,7 @@ if ($LASTEXITCODE -ne 0) {
     # Update .env.development file
     $envContent = @"
 # Instructor login credentials for NetAcad
-INSTRUCTOR_LOGIN="$instructorEmail"
+INSTRUCTOR_ID="$instructorEmail"
 INSTRUCTOR_PASSWORD="$plainPassword"
 "@
     
@@ -106,7 +106,7 @@ INSTRUCTOR_PASSWORD="$plainPassword"
 # Starting NetAcad Course Export...
 Write-Host "Starting NetAcad Course Export..." -ForegroundColor Cyan
 & "env\Scripts\Activate.ps1"
-python -m course_export
+python -m courses
 
 if ($LASTEXITCODE -eq 0) {
     Write-Host ""
