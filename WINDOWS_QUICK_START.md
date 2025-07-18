@@ -17,7 +17,7 @@
 4. **Run the startup script:**
 
    ```powershell
-   .\start.ps1
+   powershell -ExecutionPolicy Bypass -File .\start.ps1
    ```
 
 5. **The script will automatically:**
@@ -37,7 +37,7 @@
 2. **Run the startup script:**
 
    ```powershell
-   .\start.ps1
+   powershell -ExecutionPolicy Bypass -File .\start.ps1
    ```
 
 3. **The script will:**
@@ -68,7 +68,7 @@ After the application runs, you'll find your exported gradebook data in:
 1. Open PowerShell as Administrator:
    - Press `Windows + X` and select "Windows PowerShell (Admin)"
    - Navigate to your project folder: `cd C:\Users\<YourUsername>\projects\netacad`
-   - Run: `.\start.ps1`
+   - Run: `powershell -ExecutionPolicy Bypass -File .\start.ps1`
 
 ### PowerShell execution policy error
 
@@ -86,7 +86,7 @@ After the application runs, you'll find your exported gradebook data in:
 
 1. If you need to update your credentials:
    - Delete the `.env.development` file in the project folder
-   - Open a terminal and run `.\start.ps1` again - it will prompt for new credentials
+   - Open a terminal and run `powershell -ExecutionPolicy Bypass -File .\start.ps1` again - it will prompt for new credentials
 2. If you see "using default values" error:
    - The script detected template credentials
    - It will automatically prompt you to enter real ones in the terminal
@@ -113,4 +113,4 @@ The application creates several files for you:
 
 ---
 
-**Remember:** Always run `.\start.ps1` from a PowerShell terminal in the project folder - this ensures you can interact with prompts and see all output!
+**Remember:** Always run `powershell -ExecutionPolicy Bypass -File .\start.ps1` from a PowerShell terminal in the project folder - this ensures you can interact with prompts and see all output!

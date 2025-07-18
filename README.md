@@ -5,7 +5,6 @@ Welcome to the NetAcad project!
 ## Overview
 
 This repository contains resources, code, and documentation related to the NetAcad project. The goal is to support the Cisco Small Business Training Team to extract gradebook data as needed.
-This repository contains resources, code, and documentation related to the NetAcad project. The goal is to support the Cisco Small Business Training Team to extract gradebook data as needed.
 
 ## Features
 
@@ -13,19 +12,9 @@ This repository contains resources, code, and documentation related to the NetAc
 - Automatic directory creation for logs, data, and downloads
 - Automatic ChromeDriver management via Selenium
 - Automatic Gradebook data extraction
-- Automatic .env file creation
-- Automatic directory creation for logs, data, and downloads
-- Automatic ChromeDriver management via Selenium
-- Automatic Gradebook data extraction
 
 ## Getting Started
 
-### Prerequisites
-
-- Python 3.11+
-- Google Chrome browser
-- ChromeDriver (will be automatically managed by Selenium)
-
 ### Setup Instructions
 
 1. **Clone the repository:**
@@ -39,11 +28,6 @@ This repository contains resources, code, and documentation related to the NetAc
 ### Setup Instructions
 
 1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/jorcleme/netacad.git
-   cd netacad
-   ```
 
    ```bash
    git clone https://github.com/jorcleme/netacad.git
@@ -101,7 +85,7 @@ This repository contains resources, code, and documentation related to the NetAc
    ```powershell
    # Right-click start.ps1 and select "Run with PowerShell"
    # Or from PowerShell:
-   .\start.ps1
+   powershell -ExecutionPolicy Bypass -File .\start.ps1
    ```
 
    **First-time setup behavior:**
@@ -136,22 +120,14 @@ For team members who aren't tech-savvy:
 1. **First time setup:**
 
    - Download/clone the project
-   - Double-click `run-app.bat`
+   - Just run `powershell -ExecutionPolicy Bypass -File .\start.ps1` each time you want to export data
    - Follow the prompts (it will set up everything automatically)
 
-2. **Regular use:**
-
-   - Just double-click `run-app.bat` each time you want to export data
-   - The application will guide you through the process
-
-3. **Finding your files:**
+2. **Finding your files:**
 
    - All exported data will be in the `data` folder
    - CSV files: `data/csv/` (for uploading to platforms)
    - Markdown files: `data/markdown/` (for AI/LLM processing)
-
-4. **Create desktop shortcut (optional):**
-   - Double-click `create-shortcut.bat` to add a shortcut to your desktop
 
 ### Troubleshooting
 
@@ -162,7 +138,6 @@ For team members who aren't tech-savvy:
 **Windows-specific troubleshooting:**
 
 - **"Python not found"**: Install Python from <https://python.org> (check "Add Python to PATH")
-- **Script won't run**: Right-click the `.bat` file and select "Run as administrator"
 - **PowerShell execution policy**: If `.ps1` scripts won't run, open PowerShell as admin and run: `Set-ExecutionPolicy RemoteSigned`
 
 ### File Formats Explained
@@ -199,7 +174,5 @@ Contributions are welcome! Please open issues or submit pull requests for improv
 This project is licensed under the MIT License.
 
 ---
-
-_Created by the SMBDev team._
 
 _Created by the SMBDev team._
