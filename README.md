@@ -84,7 +84,7 @@ This repository contains resources, code, and documentation related to the NetAc
    ```bash
    # Create .env.development file manually
    touch .env.development
-   echo 'INSTRUCTOR_LOGIN="your_instructor_email@domain.com"' >> .env.development
+   echo 'INSTRUCTOR_ID="your_instructor_email@domain.com"' >> .env.development
    echo 'INSTRUCTOR_PASSWORD="your_password"' >> .env.development
    ```
 

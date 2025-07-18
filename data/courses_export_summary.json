@@ -1,492 +1,726 @@
-[
-    {
-        "course_id":"84fe1ab2-c9da-4ce8-b77f-9006ed97d366",
-        "course_name":"3743 Software Cisco Business Mobile App 1.10.x",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_10_04Z_b165de06-9e1c-44a4-ad1a-013dfcab6e8d_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_10_04Z_b165de06-9e1c-44a4-ad1a-013dfcab6e8d_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"ead7d699-d8d7-471e-bc0c-16b2f1003d40",
-        "course_name":"3269 Switch Catalyst 1200\/1300 MR 4.1.6",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_10_23Z_f7693d7a-2809-43b1-9a80-fa1ce2579d3b_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_10_23Z_f7693d7a-2809-43b1-9a80-fa1ce2579d3b_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"763a0ec5-357a-4d92-a95d-2e56135146f3",
-        "course_name":"3265 Switch CBS220 2.0.2.14",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_10_41Z_a85d1411-03f2-4d68-b329-2635e22de4e0_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_10_41Z_a85d1411-03f2-4d68-b329-2635e22de4e0_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"2a46c857-bf39-4fa3-b2b0-24ccbe5d7a96",
-        "course_name":"3266 Switch Catalyst 1200\/1300 MR 4.1.3",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_11_00Z_ef2a15b3-143c-4e50-95cb-91b6684a7cc7_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_11_00Z_ef2a15b3-143c-4e50-95cb-91b6684a7cc7_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"35070624-2ba1-4804-b378-70fc482fda41",
-        "course_name":"3568 Voice 9861\/71\/KEM Desk Phone Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_11_19Z_34db4fd3-88fc-4276-8152-4b05f3d72672_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_11_19Z_34db4fd3-88fc-4276-8152-4b05f3d72672_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"367b4801-6977-4736-b8dc-e7dc9f1cf8d9",
-        "course_name":"0110 New Hire Technical Onboarding - Switching",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_11_38Z_13e54b16-559d-4cfb-b6a0-5f4bc7e66c96_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_11_38Z_13e54b16-559d-4cfb-b6a0-5f4bc7e66c96_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"f82ad9a3-ba50-4b2c-b86f-4e9cd5fe3615",
-        "course_name":"3741 Software Cisco Business Mobile App 1.9.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_11_57Z_1a875621-1a1c-4e17-b33b-475aa95b8dde_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_11_57Z_1a875621-1a1c-4e17-b33b-475aa95b8dde_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"979f8a23-73e2-427b-96fb-ce2fd6635f95",
-        "course_name":"4716 Wireshark Advanced Deep Dive",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_12_16Z_20c02da3-ad02-48f8-a0ec-b8d9735f90e1_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_12_16Z_20c02da3-ad02-48f8-a0ec-b8d9735f90e1_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"7eb3b665-c723-4e0c-97b9-d612d00b1e0c",
-        "course_name":"3577 Voice PhoneOS 3.4",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_12_35Z_47ac0aa2-a3ea-4282-9d22-df57f567ae36_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_12_35Z_47ac0aa2-a3ea-4282-9d22-df57f567ae36_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"4626577a-036e-4b5b-9c4f-c4c726e13506",
-        "course_name":"3267 Switch Catalyst 1200\/1300 MR 4.1.4",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_12_53Z_ae3efea2-a23f-478d-934d-aa7188037d19_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_12_53Z_ae3efea2-a23f-478d-934d-aa7188037d19_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"983fe1a0-0012-4016-bc8f-d5dde29ee9a3",
-        "course_name":"Blank Template",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_13_17Z_d9d1bd4c-9c3a-49d0-9e6a-fa9d055a9ffa_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_13_17Z_d9d1bd4c-9c3a-49d0-9e6a-fa9d055a9ffa_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"ba97e112-3659-44e4-8eff-af4b576338a1",
-        "course_name":"3578 Voice MPP 12.0.7 SR2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T19_17_11Z_99ccaf29-90b4-477c-87e4-81ffbd8b9bfe_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T19_17_11Z_99ccaf29-90b4-477c-87e4-81ffbd8b9bfe_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"3140e9e4-8a15-49fc-ad7c-058ab54c22f1",
-        "course_name":"3555 Voice CP-8875",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T19_23_50Z_4a91a032-3bd0-4718-940c-96c566c9e68e_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T19_23_50Z_4a91a032-3bd0-4718-940c-96c566c9e68e_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"6a20049c-cbf1-488b-a8da-818cc5df8d2d",
-        "course_name":"3739 Software Cisco Business Mobile App 1.8.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T19_49_00Z_a718d10d-e3e5-4a0f-a785-e9492a140676_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T19_49_00Z_a718d10d-e3e5-4a0f-a785-e9492a140676_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"623792c9-0689-4943-b9f1-c8fa2b171f4f",
-        "course_name":"3746 Software Cisco Business Dashboard and Probe version 2.9.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_14_29Z_59c1fba9-ef50-4727-bc9b-58ab7d01ded1_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_14_29Z_59c1fba9-ef50-4727-bc9b-58ab7d01ded1_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"e3e36705-fe3a-4cc9-bf72-be6c1c74f7fb",
-        "course_name":"3742 Software Cisco Business Dashboard Lite version 2.8.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_14_48Z_63457624-16ca-414f-8864-85ddb16c6478_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_14_48Z_63457624-16ca-414f-8864-85ddb16c6478_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"3c1ffc18-2060-4f4f-b7d5-cbdd025fac2a",
-        "course_name":"3246 CBS250\/CBS350 Series Switch Product Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_15_06Z_1ff761ed-d004-4b86-9796-b63b5f071cc6_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_15_06Z_1ff761ed-d004-4b86-9796-b63b5f071cc6_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b526d327-b253-4e6f-ac9d-3154387b06fa",
-        "course_name":"0112 New Hire Technical Onboarding - Wireless",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_15_25Z_1547126e-fda3-4c3b-aa10-acd7023be264_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_15_25Z_1547126e-fda3-4c3b-aa10-acd7023be264_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"9e4d0ae8-3df4-4e3c-81cc-0c9972a76b68",
-        "course_name":"3264 Switch MRv2.5.9.5x Sx250\/Sx350xx\/ Sx550xx",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_15_44Z_828eaceb-eaf3-4a2f-b47b-9af8f7837c1b_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_15_44Z_828eaceb-eaf3-4a2f-b47b-9af8f7837c1b_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"212b93d9-f8c8-4d79-b448-93028dd82c80",
-        "course_name":"3259 Switch Catalyst 1200\/1300 Vendor Training",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_16_03Z_ad0e72c2-3e2d-4ba4-bf4f-d82dea764cda_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_16_03Z_ad0e72c2-3e2d-4ba4-bf4f-d82dea764cda_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"cc2dbd1c-b9ec-4c33-af7a-573459c5b323",
-        "course_name":"3571 Voice MPP 12.0.6",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_16_22Z_018a116f-5564-4369-ac30-3ac3db9fa467_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_16_22Z_018a116f-5564-4369-ac30-3ac3db9fa467_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"51fe43f6-5046-4623-a76f-2cf61c76eb97",
-        "course_name":"3247 Switch CBS 110 Unmanaged",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_16_41Z_9e53ef24-b07d-4480-976e-4d6404068e66_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_16_41Z_9e53ef24-b07d-4480-976e-4d6404068e66_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b95eaf04-fd65-4b5e-9f54-c9cd74f92f91",
-        "course_name":"3559 Voice 8875 PhoneOS 2.0.x",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_17_00Z_ab2daf29-546a-4e59-aa90-eb3ae495c87a_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_17_00Z_ab2daf29-546a-4e59-aa90-eb3ae495c87a_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"0ac4fd1a-f09e-4ae8-89dd-78922c87d56c",
-        "course_name":"0115 Voice Cisco MPP Onboarding \/ Fundamentals",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_17_19Z_aa7920d3-1492-4adb-9dcc-1f7194514e33_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_17_19Z_aa7920d3-1492-4adb-9dcc-1f7194514e33_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"9bffbdc5-5557-4106-98f2-f55c237abc67",
-        "course_name":"3569 Voice MPP 12.0.5",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_17_37Z_b10c47c3-046f-41f4-aa1e-587f0ef92bf1_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_17_37Z_b10c47c3-046f-41f4-aa1e-587f0ef92bf1_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"bcf1e7cb-8e2a-478f-8704-8c3e614d9dca",
-        "course_name":"3249 Switch CBS 220 Smart Switch",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_17_57Z_a23fb9d5-4a3e-47c2-bf2a-883f84da4679_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_17_57Z_a23fb9d5-4a3e-47c2-bf2a-883f84da4679_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"7840c233-afc4-42fe-966e-9953139f8d96",
-        "course_name":"3262 Switch Catalyst 1200\/1300 Phase 2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_18_16Z_ed0b38bf-05ec-4611-b14f-85663c01eadb_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_18_16Z_ed0b38bf-05ec-4611-b14f-85663c01eadb_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"cc1f62e1-824a-4f36-afc7-6a3523874507",
-        "course_name":"3752 Software Cisco Business Dashboard and Probe version 2.10.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_20_05Z_a5c96933-3384-4b29-a3b3-d8015e49fca2_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_20_05Z_a5c96933-3384-4b29-a3b3-d8015e49fca2_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"db32bd71-8d19-4993-afe0-af4406abedda",
-        "course_name":"3562 Voice DECT Firmware 5.1.2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_20_24Z_8e6767bd-3d87-48e4-84ff-23542b21bb5a_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_20_24Z_8e6767bd-3d87-48e4-84ff-23542b21bb5a_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"e3bd95cc-8e6e-4958-89a3-a0fd2e416635",
-        "course_name":"3756 Software Cisco Business Dashboard Lite 2.10.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_20_43Z_3fa8f060-8817-4b76-b561-be08252d615a_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_20_43Z_3fa8f060-8817-4b76-b561-be08252d615a_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b84531a6-c8ae-48b9-9f6e-1127ea359ae9",
-        "course_name":"3566 Voice MPP 12.0.4 SR1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_21_01Z_472da933-5488-4fe8-a059-e86d0ca8af5f_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_21_01Z_472da933-5488-4fe8-a059-e86d0ca8af5f_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"054d09de-7b13-468d-b785-b448ed5aec1b",
-        "course_name":"3748 Software PnP Discovery Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T19_28_21Z_97a39e18-20e0-4cf2-8dc5-ec22dd9038c2_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T19_28_21Z_97a39e18-20e0-4cf2-8dc5-ec22dd9038c2_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"806b31e0-38a5-4aad-9625-8750ff16f33d",
-        "course_name":"3561 Voice 8875 PhoneOS 2.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T19_18_29Z_c9936cd4-6d3b-4398-8907-3f6a5a2d65fc_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T19_18_29Z_c9936cd4-6d3b-4398-8907-3f6a5a2d65fc_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"2bdb6d0a-0e03-4069-9ac1-c97ccb52e226",
-        "course_name":"3744 Software Cisco Business Dashboard and Probe version 2.8.2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_21_58Z_ec3f59a3-7c11-40a1-8833-73d7efdc535b_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_21_58Z_ec3f59a3-7c11-40a1-8833-73d7efdc535b_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"164457ef-2017-4860-bcdf-37dcb8adda79",
-        "course_name":"3261 Switch CBS220 2.0.2.12",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_22_17Z_3c58076d-a0f2-4c8f-a2eb-cc2ceab3053d_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_22_17Z_3c58076d-a0f2-4c8f-a2eb-cc2ceab3053d_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b078caa2-f209-414c-9e31-a2cfc9c1b320",
-        "course_name":"3573 Voice DECT Firmware 5.1.3",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_22_36Z_d1a92d17-8bef-4e3c-ab71-c79e76e6127a_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_22_36Z_d1a92d17-8bef-4e3c-ab71-c79e76e6127a_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"166d61ca-990f-487d-8052-5948ba67a438",
-        "course_name":"3751 Software Cisco Business Dashboard Lite Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_22_55Z_f0cfcc61-5ee1-436b-a4d6-132429b79003_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_22_55Z_f0cfcc61-5ee1-436b-a4d6-132429b79003_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"06d14dd1-7468-4fe7-a6e4-ac2fc203d286",
-        "course_name":"3575 Voice PhoneOS 3.3",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_23_13Z_317a2cc1-1340-4fe2-8d83-c2b3b64f14f4_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_23_13Z_317a2cc1-1340-4fe2-8d83-c2b3b64f14f4_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"e85a521b-22ee-4b7c-b178-a9a5c5fd5940",
-        "course_name":"3257 Switch CBS MR 3.3",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_23_32Z_8943caba-2ec7-4956-8c2a-aa7d42bca6d1_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_23_32Z_8943caba-2ec7-4956-8c2a-aa7d42bca6d1_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"db41ec15-bc8d-459f-9eb8-0727e7eb86e2",
-        "course_name":"3270 Switch Catalyst 1200\/1300 MR 4.1.7",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_23_51Z_42a79b2c-3bfb-4d6c-b26b-476e3a018a71_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_23_51Z_42a79b2c-3bfb-4d6c-b26b-476e3a018a71_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"2f44acb2-15eb-40d2-ac12-8ad324e8339d",
-        "course_name":"3268 Switch CBS MR 3.5",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_24_10Z_7b4822b2-ce0a-455f-9275-61070972bb50_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_24_10Z_7b4822b2-ce0a-455f-9275-61070972bb50_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"6fd8577b-ce0e-482d-aca1-f6b6deaf2dd9",
-        "course_name":"3754 Software Cisco Business Mobile App 1.12.x",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_24_29Z_3c6d7da4-a430-42b5-803d-3ea12fba3808_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_24_29Z_3c6d7da4-a430-42b5-803d-3ea12fba3808_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"db2ddb4d-0ff4-4e96-af87-008369890b83",
-        "course_name":"3563 Voice MPP 12.0.3",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_24_49Z_7887982c-bb6c-44ec-a805-a70c1abfc5bf_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_24_49Z_7887982c-bb6c-44ec-a805-a70c1abfc5bf_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"a9b0256a-a962-4da6-b8e8-1b1485597b16",
-        "course_name":"3556 Vice-Versa One Step Firmware Migration",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_25_08Z_8c602235-69d3-4475-add5-be32bc578cf6_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_25_08Z_8c602235-69d3-4475-add5-be32bc578cf6_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"9b76c08e-4387-4aa4-b28a-a6fa21574f68",
-        "course_name":"3565 Voice MPP 12.0.4",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_25_26Z_fe8cb741-87b6-47d7-96fe-e995b037c81c_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_25_26Z_fe8cb741-87b6-47d7-96fe-e995b037c81c_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"1c71e5fa-a15f-46cd-bafa-1e23b27f47d9",
-        "course_name":"3560 Voice MPP 12.0.2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_25_45Z_1be92058-c754-48ec-980a-b485463e447b_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_25_45Z_1be92058-c754-48ec-980a-b485463e447b_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"69108634-8c45-4b28-a7e0-e8ad130a7abb",
-        "course_name":"3802 Meraki Go Configuration and Management",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_26_04Z_fa1c1f88-3278-4446-a66a-524c0c7b9b60_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_26_04Z_fa1c1f88-3278-4446-a66a-524c0c7b9b60_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"0d66f47e-3a84-4817-a7ac-97222ee0fe96",
-        "course_name":"3250 Switch Additional CBS 250\/350 Models",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_26_23Z_fb61bd5a-8f02-4f8a-ac61-cf9861869b5e_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_26_23Z_fb61bd5a-8f02-4f8a-ac61-cf9861869b5e_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"7bc40add-4221-4c70-9421-3a92ea915356",
-        "course_name":"3574 Voice MPP 12.0.7",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_26_42Z_62fc66ce-5ca9-4b4f-bd4b-cd69503ff0f0_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_26_42Z_62fc66ce-5ca9-4b4f-bd4b-cd69503ff0f0_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"074f3b6d-4cab-475f-9951-adc7db5295f0",
-        "course_name":"3738 Software Cisco Business Dashboard and Probe version 2.7.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_27_01Z_7b929ad8-350d-45f8-ae26-b960015bc031_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_27_01Z_7b929ad8-350d-45f8-ae26-b960015bc031_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"0987060c-e6f9-4145-89ca-0875e5d06817",
-        "course_name":"3263 Switch CBS MR 3.4",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_27_19Z_ee624ef1-fc36-44d2-bbb9-c84999d451fb_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_27_19Z_ee624ef1-fc36-44d2-bbb9-c84999d451fb_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"adf2b328-d968-4911-9637-44e286fbf36c",
-        "course_name":"3750 Software Cisco Business Dashboard and Probe version 2.9.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_28_27Z_4199a6f9-2d46-46f2-907b-0a01ff46a3ba_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_28_27Z_4199a6f9-2d46-46f2-907b-0a01ff46a3ba_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"385caff3-f456-46e3-9307-4ba562aab03f",
-        "course_name":"3801 Meraki Go Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_28_46Z_16acd77e-72ea-4df1-8186-5159c1b3a8f4_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_28_46Z_16acd77e-72ea-4df1-8186-5159c1b3a8f4_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"f5525235-3b37-4eb5-b232-a1c297d45851",
-        "course_name":"3745 Software Cisco Business Mobile App 1.11.x",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_29_04Z_176123b7-f34f-4822-859b-46f9c794001a_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_29_04Z_176123b7-f34f-4822-859b-46f9c794001a_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"07fbe0c0-2b12-4bb1-b9f7-79ddd7c66c79",
-        "course_name":"3258 Switch Catalyst 1200\/1300 Phase 1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_29_23Z_65d67d02-af26-4e18-afec-0fd975c743eb_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_29_23Z_65d67d02-af26-4e18-afec-0fd975c743eb_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"0fe92460-e87d-4a0d-9e37-1912f53baa45",
-        "course_name":"3572 Voice PhoneOS 3.2",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_29_42Z_3c7f30e8-839d-49ec-9516-abb8fd106c78_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_29_42Z_3c7f30e8-839d-49ec-9516-abb8fd106c78_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"89726c4f-03fe-4505-8281-90825f82febf",
-        "course_name":"3558 Voice MPP 12.0.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_30_01Z_57b403c3-69c5-4216-8f3a-4ac055816d48_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_30_01Z_57b403c3-69c5-4216-8f3a-4ac055816d48_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"4e543956-0aac-4f4f-8893-255f07fbc95a",
-        "course_name":"2710 Smart License Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_30_20Z_ee03b0ee-b623-4b79-9819-ef45c1acabbb_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_30_20Z_ee03b0ee-b623-4b79-9819-ef45c1acabbb_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"7b5cdd3d-151c-4a3c-9c89-32401e88d8c7",
-        "course_name":"3570 Voice ATA 11.2.5",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_30_39Z_d3542107-9dd5-4742-b4a9-5c2fb8994b8b_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_30_39Z_d3542107-9dd5-4742-b4a9-5c2fb8994b8b_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"ce870141-9d83-4dc9-bb81-0b1e2fe73dd1",
-        "course_name":"0111 New Hire Technical Onboarding - Routing",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_30_58Z_94d92244-bd96-4a06-8424-ef6e79e356cc_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_30_58Z_94d92244-bd96-4a06-8424-ef6e79e356cc_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"99af424b-846c-4177-8246-d4be02b6de99",
-        "course_name":"3579 Voice PhoneOS 3.5",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_31_17Z_5c509a2c-02c9-435f-8915-821d09fffaeb_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_31_17Z_5c509a2c-02c9-435f-8915-821d09fffaeb_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"28de21d2-e4ad-47be-bbc3-fa8e90461d78",
-        "course_name":"3747 Software Cisco Business Dashboard Lite 2.9.0",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_31_35Z_019a42a4-7274-4df9-8e17-be3c6d949538_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_31_35Z_019a42a4-7274-4df9-8e17-be3c6d949538_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"4c5e6df1-5a5d-4a7e-b3df-7ee39b30f996",
-        "course_name":"3564 Voice ATA 11.2.4",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_31_55Z_b0fdc32b-abc4-43c6-84e4-e3efe65ddbc7_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_31_55Z_b0fdc32b-abc4-43c6-84e4-e3efe65ddbc7_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"34ea96f5-6900-4871-b425-e157079002a8",
-        "course_name":"3260 Switch Catalyst 1200\/1300 MR 4.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_32_13Z_f3fd3a07-be8a-426b-a11e-d2ed244882d4_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_32_13Z_f3fd3a07-be8a-426b-a11e-d2ed244882d4_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"c8b24daa-3cae-40b1-8893-9f1ee630bf47",
-        "course_name":"2512 Voice Provisioning Phone in WebEX Calling",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_32_32Z_ac1a25cb-6712-4e49-8a78-c68e53f3fd9d_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_32_32Z_ac1a25cb-6712-4e49-8a78-c68e53f3fd9d_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"8b68db6e-e967-49f9-9493-a0d9d1a3c514",
-        "course_name":"3749 Software Cisco Business Dashboard Lite 2.9.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_32_51Z_c3b7b204-df47-4602-b748-f1a14f8480e4_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_32_51Z_c3b7b204-df47-4602-b748-f1a14f8480e4_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"70f8948a-67b0-4f60-a5f7-503174922b2f",
-        "course_name":"3755 Software Cisco Business Dashboard and Probe version 2.10.1",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_33_10Z_2e9abbfa-0a11-4415-8bb4-128cfc5441d1_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_33_10Z_2e9abbfa-0a11-4415-8bb4-128cfc5441d1_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b6f728d0-2a9a-452d-be4d-72a9adee6fb1",
-        "course_name":"3567 Voice 9841\/51 Desk Phone Introduction",
-        "csv_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\csv\\GRADEBOOK_DATA_2025_07_15T20_33_29Z_50f722d8-1c8b-40a4-927d-2bcdc68542f5_acb602e8-9367-4713-ada7-b8f78976a6dd.csv",
-        "markdown_file_path":"C:\\Users\\jorcleme\\projects\\netacad\\data\\markdown\\GRADEBOOK_DATA_2025_07_15T20_33_29Z_50f722d8-1c8b-40a4-927d-2bcdc68542f5_acb602e8-9367-4713-ada7-b8f78976a6dd.md",
-        "processing_status":"success"
-    },
-    {
-        "course_id":"b71a3956-6eff-4a00-9ed8-cfa6754299e0",
-        "course_name":"3576 Voice ATA 11.3.1",
-        "csv_file_path":"",
-        "markdown_file_path":"",
-        "processing_status":"failed"
-    },
-    {
-        "course_id":"bd4201a1-f125-4c03-9c70-ebcb7e5db731",
-        "course_name":"3753 Software Cisco Business Dashboard Lite 2.10.0",
-        "csv_file_path":"",
-        "markdown_file_path":"",
-        "processing_status":"failed"
+{
+  "summary": {
+    "export_timestamp": "2025-07-18 10:12:17",
+    "total_courses_found": 70,
+    "successful_exports": 69,
+    "failed_exports": 1,
+    "success_rate_percentage": 98.6,
+    "processing_mode": "parallel",
+    "max_workers_used": 4,
+    "export_locations": {
+      "csv_directory": "/home/jorcleme/projects/netacad/data/csv",
+      "markdown_directory": "/home/jorcleme/projects/netacad/data/markdown",
+      "logs_directory": "/home/jorcleme/projects/netacad/logs"
     }
-]
+  },
+  "courses": [
+    {
+      "course_id": "7bc40add-4221-4c70-9421-3a92ea915356",
+      "course_name": "3269 Switch Catalyst 1200/1300 MR 4.1.6",
+      "course_url": "https://www.netacad.com/launch?id=7bc40add-4221-4c70-9421-3a92ea915356",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_27Z_3269_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_27Z_3269_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "054d09de-7b13-468d-b785-b448ed5aec1b",
+      "course_name": "3573 Voice DECT Firmware 5.1.3",
+      "course_url": "https://www.netacad.com/launch?id=054d09de-7b13-468d-b785-b448ed5aec1b",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_46Z_3573_Voice_DECT_Firmware_5_1_3.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_46Z_3573_Voice_DECT_Firmware_5_1_3.md",
+      "error_message": null
+    },
+    {
+      "course_id": "385caff3-f456-46e3-9307-4ba562aab03f",
+      "course_name": "3747 Software Cisco Business Dashboard Lite 2.9.0",
+      "course_url": "https://www.netacad.com/launch?id=385caff3-f456-46e3-9307-4ba562aab03f",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_06Z_3747_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_06Z_3747_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "c8b24daa-3cae-40b1-8893-9f1ee630bf47",
+      "course_name": "3748 Software PnP Discovery Introduction",
+      "course_url": "https://www.netacad.com/launch?id=c8b24daa-3cae-40b1-8893-9f1ee630bf47",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_25Z_3748_Software_PnP_Discovery_In.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_25Z_3748_Software_PnP_Discovery_In.md",
+      "error_message": null
+    },
+    {
+      "course_id": "cc2dbd1c-b9ec-4c33-af7a-573459c5b323",
+      "course_name": "3571 Voice MPP 12.0.6",
+      "course_url": "https://www.netacad.com/launch?id=cc2dbd1c-b9ec-4c33-af7a-573459c5b323",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_45Z_3571_Voice_MPP_12_0_6.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_45Z_3571_Voice_MPP_12_0_6.md",
+      "error_message": null
+    },
+    {
+      "course_id": "a9b0256a-a962-4da6-b8e8-1b1485597b16",
+      "course_name": "3572 Voice PhoneOS 3.2",
+      "course_url": "https://www.netacad.com/launch?id=a9b0256a-a962-4da6-b8e8-1b1485597b16",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_05Z_3572_Voice_PhoneOS_3_2.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_05Z_3572_Voice_PhoneOS_3_2.md",
+      "error_message": null
+    },
+    {
+      "course_id": "983fe1a0-0012-4016-bc8f-d5dde29ee9a3",
+      "course_name": "3268 Switch CBS MR 3.5",
+      "course_url": "https://www.netacad.com/launch?id=983fe1a0-0012-4016-bc8f-d5dde29ee9a3",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_24Z_3268_Switch_CBS_MR_3_5.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_24Z_3268_Switch_CBS_MR_3_5.md",
+      "error_message": null
+    },
+    {
+      "course_id": "166d61ca-990f-487d-8052-5948ba67a438",
+      "course_name": "3746 Software Cisco Business Dashboard and Probe version 2.9.0",
+      "course_url": "https://www.netacad.com/launch?id=166d61ca-990f-487d-8052-5948ba67a438",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_44Z_3746_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_44Z_3746_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "164457ef-2017-4860-bcdf-37dcb8adda79",
+      "course_name": "3743 Software Cisco Business Mobile App 1.10.x",
+      "course_url": "https://www.netacad.com/launch?id=164457ef-2017-4860-bcdf-37dcb8adda79",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_03Z_3743_Software_Cisco_Business_M.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_03Z_3743_Software_Cisco_Business_M.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b526d327-b253-4e6f-ac9d-3154387b06fa",
+      "course_name": "3745 Software Cisco Business Mobile App 1.11.x",
+      "course_url": "https://www.netacad.com/launch?id=b526d327-b253-4e6f-ac9d-3154387b06fa",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_22Z_3745_Software_Cisco_Business_M.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_22Z_3745_Software_Cisco_Business_M.md",
+      "error_message": null
+    },
+    {
+      "course_id": "34ea96f5-6900-4871-b425-e157079002a8",
+      "course_name": "3562 Voice DECT Firmware 5.1.2",
+      "course_url": "https://www.netacad.com/launch?id=34ea96f5-6900-4871-b425-e157079002a8",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_41Z_3562_Voice_DECT_Firmware_5_1_2.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_41Z_3562_Voice_DECT_Firmware_5_1_2.md",
+      "error_message": null
+    },
+    {
+      "course_id": "69108634-8c45-4b28-a7e0-e8ad130a7abb",
+      "course_name": "3561 Voice 8875 PhoneOS 2.1",
+      "course_url": "https://www.netacad.com/launch?id=69108634-8c45-4b28-a7e0-e8ad130a7abb",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_01Z_3561_Voice_8875_PhoneOS_2_1.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_01Z_3561_Voice_8875_PhoneOS_2_1.md",
+      "error_message": null
+    },
+    {
+      "course_id": "51fe43f6-5046-4623-a76f-2cf61c76eb97",
+      "course_name": "3563 Voice MPP 12.0.3",
+      "course_url": "https://www.netacad.com/launch?id=51fe43f6-5046-4623-a76f-2cf61c76eb97",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_20Z_3563_Voice_MPP_12_0_3.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_20Z_3563_Voice_MPP_12_0_3.md",
+      "error_message": null
+    },
+    {
+      "course_id": "70f8948a-67b0-4f60-a5f7-503174922b2f",
+      "course_name": "3560 Voice MPP 12.0.2",
+      "course_url": "https://www.netacad.com/launch?id=70f8948a-67b0-4f60-a5f7-503174922b2f",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_39Z_3560_Voice_MPP_12_0_2.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_39Z_3560_Voice_MPP_12_0_2.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b71a3956-6eff-4a00-9ed8-cfa6754299e0",
+      "course_name": "3559 Voice 8875 PhoneOS 2.0.x",
+      "course_url": "https://www.netacad.com/launch?id=b71a3956-6eff-4a00-9ed8-cfa6754299e0",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_59Z_3559_Voice_8875_PhoneOS_2_0_x.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_59Z_3559_Voice_8875_PhoneOS_2_0_x.md",
+      "error_message": null
+    },
+    {
+      "course_id": "ba97e112-3659-44e4-8eff-af4b576338a1",
+      "course_name": "3564 Voice ATA 11.2.4",
+      "course_url": "https://www.netacad.com/launch?id=ba97e112-3659-44e4-8eff-af4b576338a1",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_18Z_3564_Voice_ATA_11_2_4.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_18Z_3564_Voice_ATA_11_2_4.md",
+      "error_message": null
+    },
+    {
+      "course_id": "623792c9-0689-4943-b9f1-c8fa2b171f4f",
+      "course_name": "3558 Voice MPP 12.0.1",
+      "course_url": "https://www.netacad.com/launch?id=623792c9-0689-4943-b9f1-c8fa2b171f4f",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_37Z_3558_Voice_MPP_12_0_1.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_37Z_3558_Voice_MPP_12_0_1.md",
+      "error_message": null
+    },
+    {
+      "course_id": "89726c4f-03fe-4505-8281-90825f82febf",
+      "course_name": "3565 Voice MPP 12.0.4",
+      "course_url": "https://www.netacad.com/launch?id=89726c4f-03fe-4505-8281-90825f82febf",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_28Z_3565_Voice_MPP_12_0_4.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_28Z_3565_Voice_MPP_12_0_4.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b84531a6-c8ae-48b9-9f6e-1127ea359ae9",
+      "course_name": "3556 Vice-Versa One Step Firmware Migration",
+      "course_url": "https://www.netacad.com/launch?id=b84531a6-c8ae-48b9-9f6e-1127ea359ae9",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_47Z_3556_Vice-Versa_One_Step_Firmw.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_47Z_3556_Vice-Versa_One_Step_Firmw.md",
+      "error_message": null
+    },
+    {
+      "course_id": "e3bd95cc-8e6e-4958-89a3-a0fd2e416635",
+      "course_name": "3566 Voice MPP 12.0.4 SR1",
+      "course_url": "https://www.netacad.com/launch?id=e3bd95cc-8e6e-4958-89a3-a0fd2e416635",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_07Z_3566_Voice_MPP_12_0_4_SR1.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_07Z_3566_Voice_MPP_12_0_4_SR1.md",
+      "error_message": null
+    },
+    {
+      "course_id": "2bdb6d0a-0e03-4069-9ac1-c97ccb52e226",
+      "course_name": "3555 Voice CP-8875",
+      "course_url": "https://www.netacad.com/launch?id=2bdb6d0a-0e03-4069-9ac1-c97ccb52e226",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_26Z_3555_Voice_CP-8875.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_26Z_3555_Voice_CP-8875.md",
+      "error_message": null
+    },
+    {
+      "course_id": "806b31e0-38a5-4aad-9625-8750ff16f33d",
+      "course_name": "2710 Smart License Introduction",
+      "course_url": "https://www.netacad.com/launch?id=806b31e0-38a5-4aad-9625-8750ff16f33d",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_46Z_2710_Smart_License_Introductio.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_46Z_2710_Smart_License_Introductio.md",
+      "error_message": null
+    },
+    {
+      "course_id": "979f8a23-73e2-427b-96fb-ce2fd6635f95",
+      "course_name": "2512 Voice Provisioning Phone in WebEX Calling",
+      "course_url": "https://www.netacad.com/launch?id=979f8a23-73e2-427b-96fb-ce2fd6635f95",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_05Z_2512_Voice_Provisioning_Phone_.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_05Z_2512_Voice_Provisioning_Phone_.md",
+      "error_message": null
+    },
+    {
+      "course_id": "28de21d2-e4ad-47be-bbc3-fa8e90461d78",
+      "course_name": "3567 Voice 9841/51 Desk Phone Introduction",
+      "course_url": "https://www.netacad.com/launch?id=28de21d2-e4ad-47be-bbc3-fa8e90461d78",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_25Z_3567_Voice_9841_51_Desk_Phone_.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_25Z_3567_Voice_9841_51_Desk_Phone_.md",
+      "error_message": null
+    },
+    {
+      "course_id": "1c71e5fa-a15f-46cd-bafa-1e23b27f47d9",
+      "course_name": "3568 Voice 9861/71/KEM Desk Phone Introduction",
+      "course_url": "https://www.netacad.com/launch?id=1c71e5fa-a15f-46cd-bafa-1e23b27f47d9",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_44Z_3568_Voice_9861_71_KEM_Desk_Ph.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_44Z_3568_Voice_9861_71_KEM_Desk_Ph.md",
+      "error_message": null
+    },
+    {
+      "course_id": "ce870141-9d83-4dc9-bb81-0b1e2fe73dd1",
+      "course_name": "0112 New Hire Technical Onboarding - Wireless",
+      "course_url": "https://www.netacad.com/launch?id=ce870141-9d83-4dc9-bb81-0b1e2fe73dd1",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_04Z_0112_New_Hire_Technical_Onboar.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_04Z_0112_New_Hire_Technical_Onboar.md",
+      "error_message": null
+    },
+    {
+      "course_id": "0ac4fd1a-f09e-4ae8-89dd-78922c87d56c",
+      "course_name": "0111 New Hire Technical Onboarding - Routing",
+      "course_url": "https://www.netacad.com/launch?id=0ac4fd1a-f09e-4ae8-89dd-78922c87d56c",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_23Z_0111_New_Hire_Technical_Onboar.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_23Z_0111_New_Hire_Technical_Onboar.md",
+      "error_message": null
+    },
+    {
+      "course_id": "99af424b-846c-4177-8246-d4be02b6de99",
+      "course_name": "0110 New Hire Technical Onboarding - Switching",
+      "course_url": "https://www.netacad.com/launch?id=99af424b-846c-4177-8246-d4be02b6de99",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_43Z_0110_New_Hire_Technical_Onboar.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_43Z_0110_New_Hire_Technical_Onboar.md",
+      "error_message": null
+    },
+    {
+      "course_id": "f82ad9a3-ba50-4b2c-b86f-4e9cd5fe3615",
+      "course_name": "3801 Meraki Go Introduction",
+      "course_url": "https://www.netacad.com/launch?id=f82ad9a3-ba50-4b2c-b86f-4e9cd5fe3615",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_02Z_3801_Meraki_Go_Introduction.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_02Z_3801_Meraki_Go_Introduction.md",
+      "error_message": null
+    },
+    {
+      "course_id": "763a0ec5-357a-4d92-a95d-2e56135146f3",
+      "course_name": "3802 Meraki Go Configuration and Management",
+      "course_url": "https://www.netacad.com/launch?id=763a0ec5-357a-4d92-a95d-2e56135146f3",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_22Z_3802_Meraki_Go_Configuration_a.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_22Z_3802_Meraki_Go_Configuration_a.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b6f728d0-2a9a-452d-be4d-72a9adee6fb1",
+      "course_name": "4716 Wireshark Advanced Deep Dive",
+      "course_url": "https://www.netacad.com/launch?id=b6f728d0-2a9a-452d-be4d-72a9adee6fb1",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_41Z_4716_Wireshark_Advanced_Deep_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_41Z_4716_Wireshark_Advanced_Deep_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "0d66f47e-3a84-4817-a7ac-97222ee0fe96",
+      "course_name": "3738 Software Cisco Business Dashboard and Probe version 2.7.1",
+      "course_url": "https://www.netacad.com/launch?id=0d66f47e-3a84-4817-a7ac-97222ee0fe96",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_59Z_3738_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_59Z_3738_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "0fe92460-e87d-4a0d-9e37-1912f53baa45",
+      "course_name": "3739 Software Cisco Business Mobile App 1.8.0",
+      "course_url": "https://www.netacad.com/launch?id=0fe92460-e87d-4a0d-9e37-1912f53baa45",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_18Z_3739_Software_Cisco_Business_M.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_18Z_3739_Software_Cisco_Business_M.md",
+      "error_message": null
+    },
+    {
+      "course_id": "9bffbdc5-5557-4106-98f2-f55c237abc67",
+      "course_name": "3740 Software Cisco Business Dashboard and Probe version 2.8.0",
+      "course_url": "https://www.netacad.com/launch?id=9bffbdc5-5557-4106-98f2-f55c237abc67",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_38Z_3740_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_38Z_3740_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "cc1f62e1-824a-4f36-afc7-6a3523874507",
+      "course_name": "3579 Voice PhoneOS 3.5",
+      "course_url": "https://www.netacad.com/launch?id=cc1f62e1-824a-4f36-afc7-6a3523874507",
+      "processing_status": "failed",
+      "success": false,
+      "csv_file_path": null,
+      "markdown_file_path": null,
+      "error_message": "Failed to open refresh list",
+      "failure_reason": "Failed to open refresh list"
+    },
+    {
+      "course_id": "4e543956-0aac-4f4f-8893-255f07fbc95a",
+      "course_name": "3756 Software Cisco Business Dashboard Lite 2.10.1",
+      "course_url": "https://www.netacad.com/launch?id=4e543956-0aac-4f4f-8893-255f07fbc95a",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_01Z_3756_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_01Z_3756_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "db2ddb4d-0ff4-4e96-af87-008369890b83",
+      "course_name": "3755 Software Cisco Business Dashboard and Probe version 2.10.1",
+      "course_url": "https://www.netacad.com/launch?id=db2ddb4d-0ff4-4e96-af87-008369890b83",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_20Z_3755_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_20Z_3755_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "9e4d0ae8-3df4-4e3c-81cc-0c9972a76b68",
+      "course_name": "3578 Voice MPP 12.0.7 SR2",
+      "course_url": "https://www.netacad.com/launch?id=9e4d0ae8-3df4-4e3c-81cc-0c9972a76b68",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_40Z_3578_Voice_MPP_12_0_7_SR2.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_40Z_3578_Voice_MPP_12_0_7_SR2.md",
+      "error_message": null
+    },
+    {
+      "course_id": "ead7d699-d8d7-471e-bc0c-16b2f1003d40",
+      "course_name": "3270 Switch Catalyst 1200/1300 MR 4.1.7",
+      "course_url": "https://www.netacad.com/launch?id=ead7d699-d8d7-471e-bc0c-16b2f1003d40",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_59Z_3270_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_59Z_3270_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "7eb3b665-c723-4e0c-97b9-d612d00b1e0c",
+      "course_name": "3754 Software Cisco Business Mobile App 1.12.x",
+      "course_url": "https://www.netacad.com/launch?id=7eb3b665-c723-4e0c-97b9-d612d00b1e0c",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_18Z_3754_Software_Cisco_Business_M.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_18Z_3754_Software_Cisco_Business_M.md",
+      "error_message": null
+    },
+    {
+      "course_id": "bd4201a1-f125-4c03-9c70-ebcb7e5db731",
+      "course_name": "3753 Software Cisco Business Dashboard Lite 2.10.0",
+      "course_url": "https://www.netacad.com/launch?id=bd4201a1-f125-4c03-9c70-ebcb7e5db731",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_38Z_3753_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_38Z_3753_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "7b5cdd3d-151c-4a3c-9c89-32401e88d8c7",
+      "course_name": "3752 Software Cisco Business Dashboard and Probe version 2.10.0",
+      "course_url": "https://www.netacad.com/launch?id=7b5cdd3d-151c-4a3c-9c89-32401e88d8c7",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_57Z_3752_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_57Z_3752_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "0987060c-e6f9-4145-89ca-0875e5d06817",
+      "course_name": "3577 Voice PhoneOS 3.4",
+      "course_url": "https://www.netacad.com/launch?id=0987060c-e6f9-4145-89ca-0875e5d06817",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_17Z_3577_Voice_PhoneOS_3_4.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_17Z_3577_Voice_PhoneOS_3_4.md",
+      "error_message": null
+    },
+    {
+      "course_id": "8b68db6e-e967-49f9-9493-a0d9d1a3c514",
+      "course_name": "3751 Software Cisco Business Dashboard Lite Introduction",
+      "course_url": "https://www.netacad.com/launch?id=8b68db6e-e967-49f9-9493-a0d9d1a3c514",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_36Z_3751_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_36Z_3751_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "4c5e6df1-5a5d-4a7e-b3df-7ee39b30f996",
+      "course_name": "0115 Voice Cisco MPP Onboarding / Fundamentals",
+      "course_url": "https://www.netacad.com/launch?id=4c5e6df1-5a5d-4a7e-b3df-7ee39b30f996",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_55Z_0115_Voice_Cisco_MPP_Onboardin.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_55Z_0115_Voice_Cisco_MPP_Onboardin.md",
+      "error_message": null
+    },
+    {
+      "course_id": "06d14dd1-7468-4fe7-a6e4-ac2fc203d286",
+      "course_name": "3576 Voice ATA 11.3.1",
+      "course_url": "https://www.netacad.com/launch?id=06d14dd1-7468-4fe7-a6e4-ac2fc203d286",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_15Z_3576_Voice_ATA_11_3_1.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_15Z_3576_Voice_ATA_11_3_1.md",
+      "error_message": null
+    },
+    {
+      "course_id": "4626577a-036e-4b5b-9c4f-c4c726e13506",
+      "course_name": "3569 Voice MPP 12.0.5",
+      "course_url": "https://www.netacad.com/launch?id=4626577a-036e-4b5b-9c4f-c4c726e13506",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_34Z_3569_Voice_MPP_12_0_5.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_34Z_3569_Voice_MPP_12_0_5.md",
+      "error_message": null
+    },
+    {
+      "course_id": "db32bd71-8d19-4993-afe0-af4406abedda",
+      "course_name": "3575 Voice PhoneOS 3.3",
+      "course_url": "https://www.netacad.com/launch?id=db32bd71-8d19-4993-afe0-af4406abedda",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_53Z_3575_Voice_PhoneOS_3_3.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_53Z_3575_Voice_PhoneOS_3_3.md",
+      "error_message": null
+    },
+    {
+      "course_id": "6a20049c-cbf1-488b-a8da-818cc5df8d2d",
+      "course_name": "3574 Voice MPP 12.0.7",
+      "course_url": "https://www.netacad.com/launch?id=6a20049c-cbf1-488b-a8da-818cc5df8d2d",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_13Z_3574_Voice_MPP_12_0_7.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_13Z_3574_Voice_MPP_12_0_7.md",
+      "error_message": null
+    },
+    {
+      "course_id": "e85a521b-22ee-4b7c-b178-a9a5c5fd5940",
+      "course_name": "3750 Software Cisco Business Dashboard and Probe version 2.9.1",
+      "course_url": "https://www.netacad.com/launch?id=e85a521b-22ee-4b7c-b178-a9a5c5fd5940",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_32Z_3750_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_32Z_3750_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "db41ec15-bc8d-459f-9eb8-0727e7eb86e2",
+      "course_name": "3749 Software Cisco Business Dashboard Lite 2.9.1",
+      "course_url": "https://www.netacad.com/launch?id=db41ec15-bc8d-459f-9eb8-0727e7eb86e2",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_51Z_3749_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_51Z_3749_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "bcf1e7cb-8e2a-478f-8704-8c3e614d9dca",
+      "course_name": "3741 Software Cisco Business Mobile App 1.9.0",
+      "course_url": "https://www.netacad.com/launch?id=bcf1e7cb-8e2a-478f-8704-8c3e614d9dca",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_27Z_3741_Software_Cisco_Business_M.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_27Z_3741_Software_Cisco_Business_M.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b95eaf04-fd65-4b5e-9f54-c9cd74f92f91",
+      "course_name": "3742 Software Cisco Business Dashboard Lite version 2.8.0",
+      "course_url": "https://www.netacad.com/launch?id=b95eaf04-fd65-4b5e-9f54-c9cd74f92f91",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_06_46Z_3742_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_06_46Z_3742_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "f5525235-3b37-4eb5-b232-a1c297d45851",
+      "course_name": "3744 Software Cisco Business Dashboard and Probe version 2.8.2",
+      "course_url": "https://www.netacad.com/launch?id=f5525235-3b37-4eb5-b232-a1c297d45851",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_05Z_3744_Software_Cisco_Business_D.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_05Z_3744_Software_Cisco_Business_D.md",
+      "error_message": null
+    },
+    {
+      "course_id": "e3e36705-fe3a-4cc9-bf72-be6c1c74f7fb",
+      "course_name": "3246 CBS250/CBS350 Series Switch Product Introduction",
+      "course_url": "https://www.netacad.com/launch?id=e3e36705-fe3a-4cc9-bf72-be6c1c74f7fb",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_25Z_3246_CBS250_CBS350_Series_Swit.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_25Z_3246_CBS250_CBS350_Series_Swit.md",
+      "error_message": null
+    },
+    {
+      "course_id": "7840c233-afc4-42fe-966e-9953139f8d96",
+      "course_name": "3247 Switch CBS 110 Unmanaged",
+      "course_url": "https://www.netacad.com/launch?id=7840c233-afc4-42fe-966e-9953139f8d96",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_07_44Z_3247_Switch_CBS_110_Unmanaged.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_07_44Z_3247_Switch_CBS_110_Unmanaged.md",
+      "error_message": null
+    },
+    {
+      "course_id": "b078caa2-f209-414c-9e31-a2cfc9c1b320",
+      "course_name": "3249 Switch CBS 220 Smart Switch",
+      "course_url": "https://www.netacad.com/launch?id=b078caa2-f209-414c-9e31-a2cfc9c1b320",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_04Z_3249_Switch_CBS_220_Smart_Swit.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_04Z_3249_Switch_CBS_220_Smart_Swit.md",
+      "error_message": null
+    },
+    {
+      "course_id": "3c1ffc18-2060-4f4f-b7d5-cbdd025fac2a",
+      "course_name": "3250 Switch Additional CBS 250/350 Models",
+      "course_url": "https://www.netacad.com/launch?id=3c1ffc18-2060-4f4f-b7d5-cbdd025fac2a",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_23Z_3250_Switch_Additional_CBS_250.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_23Z_3250_Switch_Additional_CBS_250.md",
+      "error_message": null
+    },
+    {
+      "course_id": "3140e9e4-8a15-49fc-ad7c-058ab54c22f1",
+      "course_name": "3257 Switch CBS MR 3.3",
+      "course_url": "https://www.netacad.com/launch?id=3140e9e4-8a15-49fc-ad7c-058ab54c22f1",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_08_42Z_3257_Switch_CBS_MR_3_3.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_08_42Z_3257_Switch_CBS_MR_3_3.md",
+      "error_message": null
+    },
+    {
+      "course_id": "6fd8577b-ce0e-482d-aca1-f6b6deaf2dd9",
+      "course_name": "3261 Switch CBS220 2.0.2.12",
+      "course_url": "https://www.netacad.com/launch?id=6fd8577b-ce0e-482d-aca1-f6b6deaf2dd9",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_02Z_3261_Switch_CBS220_2_0_2_12.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_02Z_3261_Switch_CBS220_2_0_2_12.md",
+      "error_message": null
+    },
+    {
+      "course_id": "2a46c857-bf39-4fa3-b2b0-24ccbe5d7a96",
+      "course_name": "3263 Switch CBS MR 3.4",
+      "course_url": "https://www.netacad.com/launch?id=2a46c857-bf39-4fa3-b2b0-24ccbe5d7a96",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_21Z_3263_Switch_CBS_MR_3_4.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_21Z_3263_Switch_CBS_MR_3_4.md",
+      "error_message": null
+    },
+    {
+      "course_id": "07fbe0c0-2b12-4bb1-b9f7-79ddd7c66c79",
+      "course_name": "3264 Switch MRv2.5.9.5x Sx250/Sx350xx/ Sx550xx",
+      "course_url": "https://www.netacad.com/launch?id=07fbe0c0-2b12-4bb1-b9f7-79ddd7c66c79",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_09_40Z_3264_Switch_MRv2_5_9_5x_Sx250_.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_09_40Z_3264_Switch_MRv2_5_9_5x_Sx250_.md",
+      "error_message": null
+    },
+    {
+      "course_id": "367b4801-6977-4736-b8dc-e7dc9f1cf8d9",
+      "course_name": "3265 Switch CBS220 2.0.2.14",
+      "course_url": "https://www.netacad.com/launch?id=367b4801-6977-4736-b8dc-e7dc9f1cf8d9",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_00Z_3265_Switch_CBS220_2_0_2_14.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_00Z_3265_Switch_CBS220_2_0_2_14.md",
+      "error_message": null
+    },
+    {
+      "course_id": "adf2b328-d968-4911-9637-44e286fbf36c",
+      "course_name": "3267 Switch Catalyst 1200/1300 MR 4.1.4",
+      "course_url": "https://www.netacad.com/launch?id=adf2b328-d968-4911-9637-44e286fbf36c",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_19Z_3267_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_19Z_3267_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "35070624-2ba1-4804-b378-70fc482fda41",
+      "course_name": "3266 Switch Catalyst 1200/1300 MR 4.1.3",
+      "course_url": "https://www.netacad.com/launch?id=35070624-2ba1-4804-b378-70fc482fda41",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_38Z_3266_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_38Z_3266_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "9b76c08e-4387-4aa4-b28a-a6fa21574f68",
+      "course_name": "3262 Switch Catalyst 1200/1300 Phase 2",
+      "course_url": "https://www.netacad.com/launch?id=9b76c08e-4387-4aa4-b28a-a6fa21574f68",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_10_57Z_3262_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_10_57Z_3262_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "212b93d9-f8c8-4d79-b448-93028dd82c80",
+      "course_name": "3260 Switch Catalyst 1200/1300 MR 4.1",
+      "course_url": "https://www.netacad.com/launch?id=212b93d9-f8c8-4d79-b448-93028dd82c80",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_17Z_3260_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_17Z_3260_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "84fe1ab2-c9da-4ce8-b77f-9006ed97d366",
+      "course_name": "3259 Switch Catalyst 1200/1300 Vendor Training",
+      "course_url": "https://www.netacad.com/launch?id=84fe1ab2-c9da-4ce8-b77f-9006ed97d366",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_36Z_3259_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_36Z_3259_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "074f3b6d-4cab-475f-9951-adc7db5295f0",
+      "course_name": "3258 Switch Catalyst 1200/1300 Phase 1",
+      "course_url": "https://www.netacad.com/launch?id=074f3b6d-4cab-475f-9951-adc7db5295f0",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_11_55Z_3258_Switch_Catalyst_1200_1300.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_11_55Z_3258_Switch_Catalyst_1200_1300.md",
+      "error_message": null
+    },
+    {
+      "course_id": "2f44acb2-15eb-40d2-ac12-8ad324e8339d",
+      "course_name": "3570 Voice ATA 11.2.5",
+      "course_url": "https://www.netacad.com/launch?id=2f44acb2-15eb-40d2-ac12-8ad324e8339d",
+      "processing_status": "success",
+      "success": true,
+      "csv_file_path": "/home/jorcleme/projects/netacad/data/csv/GRADEBOOK_DATA_2025-07-18T10_12_14Z_3570_Voice_ATA_11_2_5.csv",
+      "markdown_file_path": "/home/jorcleme/projects/netacad/data/markdown/GRADEBOOK_DATA_2025-07-18T10_12_14Z_3570_Voice_ATA_11_2_5.md",
+      "error_message": null
+    }
+  ],
+  "failed_course_details": [
+    {
+      "course_id": "cc1f62e1-824a-4f36-afc7-6a3523874507",
+      "course_name": "3579 Voice PhoneOS 3.5",
+      "error": "Failed to open refresh list"
+    }
+  ]
+}

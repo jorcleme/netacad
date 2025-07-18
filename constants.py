@@ -21,7 +21,7 @@ def create_env_template(env_filename: str = ".env.development") -> bool:
 
     template_content = """# Instructor login credentials for NetAcad
 # Replace with your actual credentials
-INSTRUCTOR_LOGIN="your_instructor_email@domain.com"
+INSTRUCTOR_ID="your_instructor_email@domain.com"
 INSTRUCTOR_PASSWORD="your_password"
 """
     try:
@@ -48,26 +48,39 @@ BASE_URL = "http://www.netacad.com"
 LOGIN_ID = "arenli@cisco.com"
 
 # Validate required environment variables
-INSTRUCTOR_LOGIN_ID = os.environ.get("INSTRUCTOR_LOGIN")
-INSTRUCTOR_LOGIN_PASSWORD = os.environ.get("INSTRUCTOR_PASSWORD")
+INSTRUCTOR_ID = os.environ.get("INSTRUCTOR_ID")
+INSTRUCTOR_PASSWORD = os.environ.get("INSTRUCTOR_PASSWORD")
 
-if not INSTRUCTOR_LOGIN_ID or not INSTRUCTOR_LOGIN_PASSWORD:
-    print(
-        "Warning: INSTRUCTOR_LOGIN and/or INSTRUCTOR_PASSWORD not found in environment."
-    )
+if not INSTRUCTOR_ID or not INSTRUCTOR_PASSWORD:
+    print("Warning: INSTRUCTOR_ID and/or INSTRUCTOR_PASSWORD not found in environment.")
     print(
         "Please check your .env.development file and ensure it contains valid credentials."
     )
     if (
-        INSTRUCTOR_LOGIN_ID == "your_instructor_email@domain.com"
-        or INSTRUCTOR_LOGIN_PASSWORD == "your_password"
+        INSTRUCTOR_ID == "your_instructor_email@domain.com"
+        or INSTRUCTOR_PASSWORD == "your_password"
     ):
         print(
             "It looks like you're using template values. Please update with your actual credentials."
         )
 
+PAGELOAD_TIMEOUT = 5
+WEBDRIVER_TIMEOUT = 10
 
-WEBDRIVER_TIMEOUT = 20
+# You can adjust these values based on your system capabilities and network conditions
+MAX_WORKERS = 4  # Very conservative for testing - can increase once stable
+# Number of parallel browser instances (recommended: 3-6)
+# Higher values = faster processing but more resource usage
+# Lower values = more stable but slower processing
+
+OPTIMIZED_TIMEOUTS = {
+    "page_load": 30,  # More generous timeout for page loads (NetAcad can be slow)
+    "element_wait": 15,  # More time for elements to appear
+    "download_wait": 30,  # Adequate time for file downloads
+    "modal_wait": 3,  # Quick modal interactions
+    "animation_wait": 2,  # Give animations time to complete
+    "login_wait": 5,  # More time for login transitions
+}
 
 
 # Create required directories with error handling
@@ -111,7 +124,7 @@ def validate_setup():
     """Validate that all required components are set up correctly."""
     issues = []
 
-    if not INSTRUCTOR_LOGIN_ID or not INSTRUCTOR_LOGIN_PASSWORD:
+    if not INSTRUCTOR_ID or not INSTRUCTOR_PASSWORD:
         issues.append("Missing instructor credentials in .env.development")
 
     if not LOGS_DIR.exists():
