@@ -108,7 +108,7 @@ fi
 
 # Run application
 echo -e "\e[1;36mStarting NetAcad Course Export...\e[0m"
-python -m course_export
+python -m courses
 
 if [ $? -eq 0 ]; then
   echo ""

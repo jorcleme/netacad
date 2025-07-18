@@ -377,7 +377,6 @@ def collect_course_data():
 
 def save_courses_data_to_json():
     """Save comprehensive course processing results to JSON with detailed information."""
-    from datetime import datetime
 
     # Create comprehensive course data from all results
     course_data = []
@@ -874,8 +873,29 @@ def execute_gradebook_actions(
             success=False,
             error="Failed to find export links",
         )
-
-    latest_export_link.click()
+    
+    try:
+        # Scroll into view to help with overlays
+        browser.execute_script("arguments[0].scrollIntoView(true);", latest_export_link)
+        latest_export_link.click()
+    except ElementClickInterceptedException as e:
+        logger.warning(f"⚠️ Course {course_id} {course_name} failed: {e}")
+        # Try to close privacy or overlay popups
+        try:
+            close_btn = browser.find_element(By.CSS_SELECTOR, ".privacy-policy-close, .close-button")
+            close_btn.click()
+            time.sleep(1)
+            latest_export_link.click()
+        except Exception as ex:
+            logger.warning(f"⚠️ Course {course_id} {course_name} still failed after closing overlay: {ex}")
+            return CourseExportResult(
+                course_id=course_id,
+                course_name=course_name,
+                course_url=course_url,
+                success=False,
+                error=f"Element click intercepted and overlay could not be closed: {ex}",
+            )
+        
 
     # Wait for the download to complete
     csv_filename = wait_for_parallel_download(

@@ -24,8 +24,7 @@ from constants import (
     BASE_URL,
     INSTRUCTOR_ID,
     INSTRUCTOR_PASSWORD,
-    PAGELOAD_TIMEOUT,
-    WEBDRIVER_TIMEOUT,
+    OPTIMIZED_TIMEOUTS,
     LOGS_DIR,
     DATA_DIR,
     CSV_DATA_DIR,
@@ -89,7 +88,7 @@ logger.info("Initializing Chrome WebDriver...")
 browser = webdriver.Chrome(
     options=options, service=ChromeService(ChromeDriverManager().install())
 )
-wait = WebDriverWait(browser, WEBDRIVER_TIMEOUT)
+wait = WebDriverWait(browser, OPTIMIZED_TIMEOUTS["page_load"])
 
 browser.delete_all_cookies()
 browser.get(BASE_URL)
