@@ -1,0 +1,140 @@
+### cae-np-alln-netacad-gradebook-manager-dev.yaml is of the format cae-np-<location>-<namespace>-<prod/stage/dev>.yaml
+
+###Contents:
+#Replace fb91a692940d619aadf1d27788153707bec524b4 with the software ID from CoDE. It is just used for labels afaik, so if not feasible, can be skipped.
+
+---
+# App deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 'netacad-gradebook-manager'
+  namespace: 'netacad-gradebook-manager'
+  labels:
+    softwareId: 'fb91a692940d619aadf1d27788153707bec524b4'
+    softwareName: 'netacad-gradebook-manager-ui'
+spec:
+  selector:
+    matchLabels:
+      app: 'netacad-gradebook-manager'
+  replicas: 1
+  template:
+    metadata:
+      namespace: 'netacad-gradebook-manager'
+      labels:
+        app: 'netacad-gradebook-manager-ui'
+        environment: 'dev'
+        softwareId: 'fb91a692940d619aadf1d27788153707bec524b4'
+        softwareName: 'netacad-gradebook-manager-ui'
+    spec:
+      containers:
+        - image: 'containers.cisco.com/proseide/netacad-gradebook-manager-ui'
+          imagePullPolicy: Always
+          name: 'netacad-gradebook-manager-ui'
+          env:
+            - name: INSTRUCTOR_ID
+              valueFrom:
+                secretKeyRef:
+                  name: 'env-netacad-gradebook-manager'
+                  key: INSTRUCTOR_ID
+            - name: INSTRUCTOR_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: 'env-netacad-gradebook-manager'
+                  key: INSTRUCTOR_PASSWORD
+            - name: OAUTH_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: 'env-netacad-gradebook-manager'
+                  key: OAUTH_CLIENT_ID
+            - name: OAUTH_CLIENT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: 'env-netacad-gradebook-manager'
+                  key: OAUTH_CLIENT_SECRET
+            - name: OAUTH_DISCOVERY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: 'env-netacad-gradebook-manager'
+                  key: OAUTH_DISCOVERY_URL
+
+          ports:
+            - containerPort: 8000
+          resources:
+            limits:
+              cpu: 500m
+              memory: 2Gi
+            requests:
+              cpu: 250m
+              memory: 1Gi
+      imagePullSecrets:
+        - name: proseide-cdconsole-bot-pull-secret
+
+---
+# App service exposing port 8000
+apiVersion: v1
+kind: Service
+metadata:
+  name: 'netacad-gradebook-manager-service'
+  namespace: 'netacad-gradebook-manager'
+  labels:
+    softwareId: 'fb91a692940d619aadf1d27788153707bec524b4'
+    softwareName: 'netacad-gradebook-manager-ui'
+spec:
+  ports:
+    - name: 'web'
+      protocol: 'TCP'
+      port: 8000
+  selector:
+    app: 'netacad-gradebook-manager-ui'
+  type: ClusterIP
+
+---
+# Ingress pointing to app port 8000
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: spanning-content-tree-app-route
+  namespace: spanning-content-tree
+  annotations:
+    haproxy.router.openshift.io/rewrite-target: /
+    haproxy.router.openshift.io/disable_cookies: 'true'
+    haproxy.router.openshift.io/timeout-check: 2m
+    haproxy.router.openshift.io/timeout: 8m
+    haproxy.router.openshift.io/balance: roundrobin
+spec:
+  host: spanning-content-tree.cisco.com
+  path:
+  to:
+    kind: Service
+    name: spanning-content-tree-app-service
+  tls:
+    termination: edge
+  port:
+    targetPort: web
+
+---
+apiVersion: cae.cisco.com/v1
+kind: SSOAuthConfig
+metadata:
+  name: spanning-content-tree.cisco.com
+  namespace: spanning-content-tree
+spec:
+  contexts:
+    - context: /
+      contextMatch: prefix
+      policyType: web
+  policy:
+    web:
+      allow:
+        - paths:
+            - path: /
+              pathMatch: prefix
+          when:
+            - kind: userId
+              values:
+                - '*'
+  provider:
+    cors: platform
+    idp: duo
+    sso: application

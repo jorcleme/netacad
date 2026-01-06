@@ -13,12 +13,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-/data/csv/*.csv
-/data/markdown/*.md
+elements-svelte/**/*
+backend/data/gradebooks/**/*
 
-spanning-content-tree/backend/data/config.json
-
-backend/data/config.json
+backend/env
 # C extensions
 *.so
 
@@ -140,7 +138,6 @@ celerybeat.pid
 
 # Environments
 .env
-.env.*
 .venv
 env/
 venv/
@@ -315,4 +312,12 @@ cypress/videos
 cypress/screenshots
 .vscode/settings.json
 backend/data/config.json
-/backend/data/config.json
+/backend/data
+/backend/env
+
+
+AZURE_APP_REGISTRATION_STEPS.md
+IT_REQUEST_TEMPLATE.md
+ONEDRIVE_INTEGRATION_GUIDE.md
+
+backend/.secret_key
