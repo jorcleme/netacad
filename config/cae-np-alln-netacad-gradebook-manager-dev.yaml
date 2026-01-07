@@ -94,8 +94,8 @@ spec:
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: spanning-content-tree-app-route
-  namespace: spanning-content-tree
+  name: netacad-gradebook-manager-route
+  namespace: netacad-gradebook-manager
   annotations:
     haproxy.router.openshift.io/rewrite-target: /
     haproxy.router.openshift.io/disable_cookies: 'true'
@@ -103,11 +103,11 @@ metadata:
     haproxy.router.openshift.io/timeout: 8m
     haproxy.router.openshift.io/balance: roundrobin
 spec:
-  host: spanning-content-tree.cisco.com
+  host: netacad-gradebook-manager.cisco.com
   path:
   to:
     kind: Service
-    name: spanning-content-tree-app-service
+    name: netacad-gradebook-manager-service
   tls:
     termination: edge
   port:
@@ -117,8 +117,8 @@ spec:
 apiVersion: cae.cisco.com/v1
 kind: SSOAuthConfig
 metadata:
-  name: spanning-content-tree.cisco.com
-  namespace: spanning-content-tree
+  name: netacad-gradebook-manager.cisco.com
+  namespace: netacad-gradebook-manager
 spec:
   contexts:
     - context: /
