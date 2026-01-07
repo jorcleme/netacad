@@ -10,7 +10,7 @@ from app.models.users import Users
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
-
+logger.setLevel(logging.INFO)
 
 sio = socketio.AsyncServer(
     cors_allowed_origins=[],

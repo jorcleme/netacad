@@ -2,7 +2,7 @@
 	import { getSyncStatus } from '$lib/api/courses';
 	import type { SyncStatusResponse } from '$lib/types';
 	import { toast } from 'svelte-sonner';
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 
 	interface Props {
 		syncId: string;
@@ -13,33 +13,20 @@
 	let { syncId, onComplete, onError }: Props = $props();
 
 	let status = $state<SyncStatusResponse | null>(null);
-	let pollInterval: ReturnType<typeof setInterval> | null = null;
-	let isPolling = $state(true);
-
-	onMount(() => {
-		// Start polling immediately
-		checkStatus();
-		pollInterval = setInterval(checkStatus, 2000); // Poll every 2 seconds
-	});
-
-	onDestroy(() => {
-		if (pollInterval) {
-			clearInterval(pollInterval);
-		}
-	});
+	let isChecking = $state(false);
+	let isSyncComplete = $state(false);
 
 	async function checkStatus() {
+		if (isChecking) return; // Prevent double-clicking
+		
+		isChecking = true;
 		try {
 			const response = await getSyncStatus(syncId);
 			status = response;
 
-			// Stop polling if sync is complete or failed
+			// Check if sync is complete or failed
 			if (response.status === 'completed' || response.status === 'failed') {
-				if (pollInterval) {
-					clearInterval(pollInterval);
-					pollInterval = null;
-				}
-				isPolling = false;
+				isSyncComplete = true;
 
 				// Trigger callbacks
 				if (response.status === 'completed') {
@@ -55,9 +42,18 @@
 			}
 		} catch (err) {
 			console.error('Error checking sync status:', err);
-			// Don't stop polling on error, might be transient
+			toast.error('Failed to check sync status. Please try again.');
+		} finally {
+			isChecking = false;
 		}
 	}
+
+	onMount(async () => {
+		// Check status once on mount
+		await checkStatus();
+	});
+
+
 
 	function formatDuration(seconds: number | undefined): string {
 		if (!seconds) return '0s';
@@ -179,21 +175,47 @@
 			</div>
 		</div>
 
-		<!-- Refresh Button (only when processing) -->
-		{#if isPolling}
+		<!-- Check Status Button (always visible when not complete) -->
+		{#if !isSyncComplete}
 			<button
 				onclick={checkStatus}
-				class="rounded-full p-2 text-cisco-primary-blue transition hover:bg-cisco-blue-05 dark:text-cisco-light-blue-50 dark:hover:bg-cisco-gray-70"
-				aria-label="Refresh status"
+				disabled={isChecking}
+				class="flex items-center gap-2 rounded-full px-4 py-2 font-medium text-cisco-primary-blue transition hover:bg-cisco-blue-05 disabled:cursor-not-allowed disabled:opacity-50 dark:text-cisco-light-blue-50 dark:hover:bg-cisco-gray-70"
+				aria-label="Check sync status"
 			>
-				<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-					></path>
-				</svg>
+				{#if isChecking}
+					<svg
+						class="h-5 w-5 animate-spin"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+					>
+						<circle
+							class="opacity-25"
+							cx="12"
+							cy="12"
+							r="10"
+							stroke="currentColor"
+							stroke-width="4"
+						></circle>
+						<path
+							class="opacity-75"
+							fill="currentColor"
+							d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+						></path>
+					</svg>
+					<span>Checking...</span>
+				{:else}
+					<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+						></path>
+					</svg>
+					<span>Check Status</span>
+				{/if}
 			</button>
 		{/if}
 	</div>

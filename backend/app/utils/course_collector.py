@@ -8,8 +8,14 @@ from app.config import (
     NETACAD_INSTRUCTOR_ID,
     NETACAD_INSTRUCTOR_PASSWORD,
 )
+from app.utils.playwright_config import (
+    get_browser_launch_config,
+    get_context_config,
+    get_playwright_config,
+)
 
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 
 def parse_course_dates(
@@ -52,7 +58,7 @@ def parse_course_dates(
 
 
 class CourseCollector:
-    def __init__(self, headless: bool = False):
+    def __init__(self, headless: bool = True):
         self.headless = headless
         self.browser = None
         self.context = None
@@ -101,10 +107,12 @@ class CourseCollector:
     async def _navigate_to_login(self):
         """Navigate to the login page and click the login button."""
         try:
+            logger.info("Looking for login button...")
             login_btn = self.page.locator(".loginBtn--lfDa2")
 
-            # Wait for the button to be visible
-            await login_btn.wait_for(state="visible", timeout=10000)
+            # Wait for the button to be visible with increased timeout
+            await login_btn.wait_for(state="visible", timeout=30000)
+            logger.info("Login button found.")
 
             # Scroll element into view using JavaScript
             await login_btn.evaluate(
@@ -112,38 +120,134 @@ class CourseCollector:
             )
 
             # Wait a moment for scroll to complete
-            await self.page.wait_for_timeout(500)
+            await self.page.wait_for_timeout(1000)
 
             # Click the button
             await login_btn.click()
             logger.info("Clicked on the login button.")
+
+            # Wait for the auth page to load
+            await self.page.wait_for_load_state("domcontentloaded", timeout=30000)
+            logger.info(f"Navigated to: {self.page.url}")
+
         except Exception as e:
             logger.error(f"Error navigating to login: {e}")
+            logger.error(f"Current URL: {self.page.url}")
+
+            # Try to get page title for debugging
+            try:
+                title = await self.page.title()
+                logger.debug(f"Page title: {title}")
+            except:
+                pass
+
             raise
 
     async def _send_credentials(self):
-        """Send username and password."""
+        """
+        Send username and password in a two-step process:
+        1. Enter username and submit (navigates to password page)
+        2. Enter password and submit (logs in)
+        """
+        USERNAME = (NETACAD_INSTRUCTOR_ID or "").strip()
+        PASSWORD = (NETACAD_INSTRUCTOR_PASSWORD or "").strip()
+
+        logger.info(f"[Step 1/3] Entering username: {USERNAME}")
+
         try:
-            # Enter username
+            # Wait for username field
             username_field = self.page.locator("#username")
-            await username_field.fill(NETACAD_INSTRUCTOR_ID)
-            await username_field.press("Enter")
+            await username_field.wait_for(state="visible", timeout=30000)
+            await username_field.fill(USERNAME)
             logger.info("Username entered.")
 
-            # Wait for password field and enter password
-            password_field = self.page.locator("#password")
-            await password_field.wait_for(state="visible", timeout=10000)
-            await password_field.fill(NETACAD_INSTRUCTOR_PASSWORD)
-            await password_field.press("Enter")
-            logger.info("Password entered.")
+            # Find the submit button (not an input, it's a button or input[type=submit])
+            # Try common selectors for Keycloak login buttons
+            submit_btn = self.page.locator("#kc-login")
+            await submit_btn.wait_for(state="visible", timeout=10000)
 
-            # Wait for successful login by checking for course list element (only <a> tags)
-            # This is more reliable than networkidle which may never happen
-            await self.page.wait_for_selector("a.instance_name--dioD1", timeout=30000)
-            logger.info("Login successful.")
+            logger.info("Submitting username form...")
+            current_url = self.page.url
+            logger.debug(f"URL before submit: {current_url}")
+
+            # Click the button normally (not middle-click!)
+            await submit_btn.click()
+            logger.info("Submit button clicked.")
+
+            # Wait for navigation to password page
+            # The URL might change or stay the same (SPA behavior)
+            await self.page.wait_for_timeout(2000)  # Give it time to process
+
+            new_url = self.page.url
+            logger.debug(f"URL after submit: {new_url}")
+            logger.debug(f"URL changed: {current_url != new_url}")
+
+            # [Step 2/3] Wait for password field to appear
+            logger.info("[Step 2/3] Waiting for password field...")
+            password_field = self.page.locator("#password")
+
+            try:
+                await password_field.wait_for(state="visible", timeout=30000)
+                logger.info("Password field found!")
+            except Exception as e:
+                logger.error(f"Password field did not appear after {30} seconds")
+                logger.error(f"Current URL: {self.page.url}")
+
+                # Debug: Take screenshot and check page state
+                try:
+                    screenshot_path = "/app/backend/data/no_password_field.png"
+                    await self.page.screenshot(path=screenshot_path, full_page=True)
+                    logger.error(f"Screenshot saved to {screenshot_path}")
+
+                    # Check what inputs are visible
+                    inputs = await self.page.locator("input").all()
+                    logger.error(f"Found {len(inputs)} input fields:")
+                    for i, inp in enumerate(inputs):
+                        try:
+                            input_type = await inp.get_attribute("type")
+                            input_name = await inp.get_attribute("name")
+                            input_id = await inp.get_attribute("id")
+                            visible = await inp.is_visible()
+                            logger.error(
+                                f"  Input {i}: type={input_type}, name={input_name}, id={input_id}, visible={visible}"
+                            )
+                        except:
+                            pass
+
+                    # Check for error messages
+                    error_selectors = [
+                        ".kc-feedback-text",
+                        "#input-error",
+                        ".alert-error",
+                        "[role='alert']",
+                    ]
+                    for sel in error_selectors:
+                        elem = self.page.locator(sel).first
+                        if await elem.is_visible():
+                            error_text = await elem.text_content()
+                            logger.error(f"⚠️  Error message found: {error_text}")
+                except:
+                    pass
+
+                raise
+
+            # [Step 3/3] Enter password and submit
+            logger.info("[Step 3/3] Entering password...")
+            await password_field.fill(PASSWORD)
+            logger.info("Password entered, submitting...")
+
+            # Submit by pressing Enter or clicking submit button
+            await password_field.press("Enter")
+
+            # Wait for successful login by checking for course list element
+            logger.info("Waiting for dashboard to load...")
+            await self.page.wait_for_selector("a.instance_name--dioD1", timeout=60000)
+            logger.info("✓ Login successful! Dashboard loaded.")
+            logger.info(f"Final URL: {self.page.url}")
 
         except Exception as e:
-            logger.error(f"Error sending credentials: {e}")
+            logger.error(f"❌ Error during authentication: {e}")
+            logger.error(f"Current URL: {self.page.url}")
             raise
 
     async def _collect_page_courses(

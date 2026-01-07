@@ -30,6 +30,15 @@ if [ -z "$SECRET_KEY" ]; then
     export SECRET_KEY=$(cat "$KEY_FILE" | tr -d '\n')
 fi
 
+# Activate virtual environment if it exists
+if [ -d "env/bin" ]; then
+    echo -e "\033[0;36mActivating virtual environment...\033[0m"
+    source env/bin/activate
+    echo -e "\033[0;32mVirtual environment activated\033[0m"
+else
+    echo -e "\033[0;33mVirtual environment not found. Using system Python.\033[0m"
+fi
+
 # Check if Playwright browsers are installed
 echo -e "\033[0;36mChecking Playwright installation...\033[0m"
 if ! python -c "from playwright.sync_api import sync_playwright; sync_playwright().start().chromium.launch()" &> /dev/null; then

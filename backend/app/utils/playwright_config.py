@@ -20,6 +20,7 @@ def get_browser_args() -> List[str]:
     """
     args = [
         "--disable-gpu",
+        "--shm-size=1g",
         "--no-sandbox",
         "--disable-dev-shm-usage",
         "--disable-setuid-sandbox",
@@ -50,7 +51,6 @@ def get_browser_launch_config(headless: bool = True) -> Dict[str, Any]:
     config = {
         "headless": headless,
         "args": get_browser_args(),
-        "chromium_sandbox": False,
         "timeout": 60000,  # 60 second timeout
     }
 
@@ -74,7 +74,6 @@ def get_context_config() -> Dict[str, Any]:
         "accept_downloads": True,
         "bypass_csp": True,  # Bypass Content Security Policy
         "ignore_https_errors": True,  # For self-signed certs in dev
-        "java_script_enabled": True,
         "locale": "en-US",
         "timezone_id": "America/New_York",
         "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36",

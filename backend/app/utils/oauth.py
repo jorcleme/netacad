@@ -21,6 +21,7 @@ from starlette.responses import RedirectResponse
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 
 class OAuthManager:

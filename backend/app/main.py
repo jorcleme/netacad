@@ -25,6 +25,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
 )
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 print(
     rf"""NETACAD GRADEBOOK MANAGER

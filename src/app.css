@@ -465,3 +465,7 @@
 	background-color: transparent;
 	border-radius: 9999px;
 }
+
+.tippy-box[data-theme~='dark'] {
+	@apply rounded-lg border border-gray-900 bg-gray-950 p-2 text-xs text-white shadow-xl;
+}

@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO, force=True)
 logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 APP_DIR = Path(__file__).resolve().parent
 BACKEND_DIR = APP_DIR.parent

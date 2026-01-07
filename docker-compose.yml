@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  netacad:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        UID: 1000
+        GID: 1000
+    image: netacad:latest
+    container_name: netacad-app
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=prod
+      - PORT=8000
+      - SECRET_KEY=${SECRET_KEY}
+      - INSTRUCTOR_ID=${INSTRUCTOR_ID}
+      - INSTRUCTOR_PASSWORD=${INSTRUCTOR_PASSWORD}
+      - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID}
+      - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET}
+      - OAUTH_DISCOVERY_URL=${OAUTH_DISCOVERY_URL}
+      - OAUTH_SCOPES=${OAUTH_SCOPES:-openid email profile}
+      - OAUTH_PROVIDER_NAME=${OAUTH_PROVIDER_NAME:-Cisco SSO}
+    volumes:
+      # Persist database and logs
+      - ./backend/data:/app/backend/data
+      - ./backend/logs:/app/backend/logs
+    restart: unless-stopped
+    healthcheck:
+      test:
+        ["CMD", "curl", "--silent", "--fail", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s

@@ -319,11 +319,15 @@ async def download_multiple_gradebooks(request: BulkGradebookDownloadRequest):
 
     Returns a zip file containing all gradebook CSVs, Markdown files, and a summary.
     """
-    try:
-        logger.info(
-            f"Bulk gradebook download requested for {len(request.courses)} courses"
-        )
+    import time
 
+    start_time = time.time()
+    logger.info("=" * 60)
+    logger.info(f"📦 BULK GRADEBOOK DOWNLOAD STARTED")
+    logger.info(f"📚 Requested courses: {len(request.courses)}")
+    logger.info("=" * 60)
+
+    try:
         async with async_playwright() as p:
             # Launch browser
             browser = await p.chromium.launch(
@@ -354,19 +358,43 @@ async def download_multiple_gradebooks(request: BulkGradebookDownloadRequest):
                     for c in request.courses
                 ]
 
-                # Download all gradebooks
-                results = await manager.download_multiple_gradebooks(courses)
+                # Download all gradebooks (parallel mode for speed!)
+                download_start = time.time()
+                results = await manager.download_multiple_gradebooks(
+                    courses,
+                    parallel=True,  # Enable parallel downloads
+                    max_workers=8,  # 8 concurrent downloads for optimal speed
+                )
+                download_elapsed = time.time() - download_start
 
                 # Create zip file
+                zip_start = time.time()
                 zip_buffer = GradebookManager.create_gradebook_zip(
                     results, include_markdown=True
                 )
+                zip_elapsed = time.time() - zip_start
 
                 if not zip_buffer:
                     raise HTTPException(
                         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                         detail="Failed to create zip file - no successful downloads",
                     )
+
+                # Calculate final metrics
+                total_elapsed = time.time() - start_time
+                successful = sum(1 for r in results if r["success"])
+
+                logger.info("=" * 60)
+                logger.info("✅ BULK GRADEBOOK DOWNLOAD COMPLETED")
+                logger.info("=" * 60)
+                logger.info(f"📊 Results: {successful}/{len(courses)} successful")
+                logger.info(f"⏱️  Download time: {download_elapsed:.2f}s")
+                logger.info(f"📦 Zip creation: {zip_elapsed:.2f}s")
+                logger.info(
+                    f"🎯 Total time: {total_elapsed:.2f}s ({total_elapsed/60:.2f} minutes)"
+                )
+                logger.info(f"⚡ Avg per course: {download_elapsed/len(courses):.2f}s")
+                logger.info("=" * 60)
 
                 # Generate filename with timestamp
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

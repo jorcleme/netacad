@@ -2,7 +2,7 @@
 ARG UID=0
 ARG GID=0
 
-FROM containers.cisco.com/cway/node-alpine-hardened:22.21.1 as build
+FROM containers.cisco.com/cway/node-alpine-hardened:22.21.1 AS build
 LABEL quay.expires_after=""
 
 WORKDIR /app
@@ -13,6 +13,10 @@ RUN npm ci
 
 COPY . .
 RUN npm run build
+
+
+FROM containers.cisco.com/jorcleme/netacad-gradebook-manager-db:latest AS database
+LABEL quay.expires_after=""
 
 FROM python:3.12-slim-bookworm AS base
 
@@ -54,6 +58,12 @@ RUN playwright install --with-deps chromium
 # copy built frontend files
 COPY --chown=$UID:$GID --from=build /app/build /app/build
 COPY --chown=$UID:$GID --from=build /app/package.json /app/package.json
+
+# copy backend files
+COPY --chown=$UID:$GID ./backend .
+
+# copy database file from database image
+COPY --chown=$UID:$GID --from=database ./netacad.db /app/backend/data/netacad.db
 
 # Fix ownership and perms recursively, including subdirs
 RUN chgrp -R $GID /app/backend && \
