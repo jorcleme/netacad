@@ -1,0 +1,16 @@
+# Simple test container - just runs sanity tests
+FROM python:3.12-slim-bookworm AS test
+
+WORKDIR /app
+
+# Install test dependencies only
+COPY tests/test_requirements.txt /app/tests/test_requirements.txt
+RUN pip install --no-cache-dir -r /app/tests/test_requirements.txt
+
+# Copy tests only
+COPY tests/ /app/tests/
+
+ENV PYTHONUNBUFFERED=1
+
+# Run tests with coverage and reports for CI/CD
+ENTRYPOINT ["pytest", "tests/", "-v", "--cov", "--cov-report=xml:coverage.xml", "--junitxml=pytest-report.xml", "--tb=short"]
