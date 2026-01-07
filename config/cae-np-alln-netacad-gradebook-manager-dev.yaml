@@ -16,7 +16,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: 'netacad-gradebook-manager'
+      app: 'netacad-gradebook-manager-ui'
   replicas: 1
   template:
     metadata:
