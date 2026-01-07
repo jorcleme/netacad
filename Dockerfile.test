@@ -12,5 +12,6 @@ COPY tests/ /app/tests/
 
 ENV PYTHONUNBUFFERED=1
 
-# Run tests with coverage and reports for CI/CD
-ENTRYPOINT ["pytest", "tests/", "-v", "--cov", "--cov-report=xml:coverage.xml", "--junitxml=pytest-report.xml", "--tb=short"]
+# Run tests and generate reports
+# Use nosetests.xml for compatibility with Jenkins expectations
+ENTRYPOINT ["pytest", "tests/", "-v", "--junitxml=nosetests.xml", "--tb=short"]

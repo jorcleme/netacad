@@ -94,8 +94,10 @@ pipeline {
 						sh "rm -rf coverage.xml nosetests.xml .coverage kubelint.json kubelint.log Dockerlint.json lintresult.log"
 						sh "docker build . -f Dockerfile.test -t node-test:${BUILD_ID}"
 
-						sh '''docker run node-test:${BUILD_ID}'''
-						// sh '''sed -i 's|filename="|filename="'"$(pwd)"'/|' coverage.xml'''
+						// Run tests and copy results out of container
+						sh '''docker run --name test-container-${BUILD_ID} node-test:${BUILD_ID} || true'''
+						sh '''docker cp test-container-${BUILD_ID}:/app/nosetests.xml ./nosetests.xml || touch nosetests.xml'''
+						sh '''docker rm test-container-${BUILD_ID} || true'''
 						
                                                 echo "Starting Kube-linter....."
                                                 sh 'docker run --rm -i -v "$(pwd)":/app stackrox/kube-linter lint /app/config/ --format=json > kubelint.json || exit 0'
