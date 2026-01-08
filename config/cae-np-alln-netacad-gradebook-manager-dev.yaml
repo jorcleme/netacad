@@ -62,11 +62,11 @@ spec:
             - containerPort: 8000
           resources:
             limits:
-              cpu: 500m
-              memory: 2Gi
+              cpu: 125m
+              memory: 256Mi
             requests:
-              cpu: 250m
-              memory: 1Gi
+              cpu: 125m
+              memory: 128Mi
       imagePullSecrets:
         - name: proseide-cdconsole-bot-pull-secret
 

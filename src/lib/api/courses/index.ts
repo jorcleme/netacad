@@ -1,4 +1,5 @@
 import type { AllCourseResponse, SyncCoursesResponse, SyncStatusResponse } from '$lib/types';
+import { API_BASE_URL } from '$lib/constants';
 
 export const getAllCourses = async (
 	skip = 0,
@@ -17,7 +18,7 @@ export const getAllCourses = async (
 		params.append('status', status);
 	}
 
-	const response = await fetch(`http://localhost:8000/api/v1/courses/?${params.toString()}`, {
+	const response = await fetch(`${API_BASE_URL}/courses/?${params.toString()}`, {
 		method: 'GET',
 		headers: {
 			'Content-Type': 'application/json'
@@ -42,7 +43,7 @@ export const getAllCourses = async (
 export const syncCoursesFromNetacad = async (): Promise<SyncCoursesResponse> => {
 	let error = null;
 
-	const response = await fetch(`http://localhost:8000/api/v1/courses/sync`, {
+	const response = await fetch(`${API_BASE_URL}/courses/sync`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
@@ -74,8 +75,8 @@ export const getSyncStatus = async (syncId?: string): Promise<SyncStatusResponse
 	}
 
 	const url = syncId
-		? `http://localhost:8000/api/v1/courses/sync/status?${queryParams.toString()}`
-		: `http://localhost:8000/api/v1/courses/sync/status`;
+		? `${API_BASE_URL}/courses/sync/status?${queryParams.toString()}`
+		: `${API_BASE_URL}/courses/sync/status`;
 
 	const response = await fetch(url, {
 		method: 'GET',
@@ -119,7 +120,7 @@ export const downloadGradebook = async (
 	course_name: string,
 	course_url: string
 ): Promise<Blob> => {
-	const response = await fetch(`http://localhost:8000/api/v1/courses/gradebook/download`, {
+	const response = await fetch(`${API_BASE_URL}/courses/gradebook/download`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
@@ -145,7 +146,7 @@ export const downloadMultipleGradebooks = async (
 ): Promise<Blob> => {
 	try {
 		console.log('[API] Sending request to download gradebooks...');
-		const response = await fetch(`http://localhost:8000/api/v1/courses/gradebook/download/bulk`, {
+		const response = await fetch(`${API_BASE_URL}/courses/gradebook/download/bulk`, {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
@@ -201,9 +202,7 @@ export const getGradebookFile = async (
 	fileType: 'csv' | 'markdown',
 	filename: string
 ): Promise<Blob> => {
-	const response = await fetch(
-		`http://localhost:8000/api/v1/courses/gradebook/file/${fileType}/${filename}`
-	);
+	const response = await fetch(`${API_BASE_URL}/courses/gradebook/file/${fileType}/${filename}`);
 
 	if (!response.ok) {
 		throw new Error(`Failed to download file: ${response.statusText}`);
