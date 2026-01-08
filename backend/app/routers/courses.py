@@ -363,7 +363,7 @@ async def download_multiple_gradebooks(request: BulkGradebookDownloadRequest):
                 results = await manager.download_multiple_gradebooks(
                     courses,
                     parallel=True,  # Enable parallel downloads
-                    max_workers=8,  # 8 concurrent downloads for optimal speed
+                    max_workers=4,  # 4 concurrent downloads to fit within 2GB memory limit
                 )
                 download_elapsed = time.time() - download_start
 
