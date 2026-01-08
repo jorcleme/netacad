@@ -36,6 +36,18 @@ RUN mkdir -p /app/backend/data
 
 
 ENV HOME=/root
+
+# install python dependencies
+COPY ./backend/requirements.txt ./requirements.txt
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Install Playwright browsers and dependencies as root
+# This must happen before switching to non-root user
+ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+RUN playwright install --with-deps chromium && \
+    chmod -R 755 /ms-playwright
+
 # Create user and group if not root
 RUN if [ $UID -ne 0 ]; then \
     if [ $GID -ne 0 ]; then \
@@ -46,14 +58,6 @@ RUN if [ $UID -ne 0 ]; then \
 
 # Make sure the user has access to the app and root directory
 RUN chown -R $UID:$GID /app $HOME
-
-# install python dependencies
-COPY --chown=$UID:$GID ./backend/requirements.txt ./requirements.txt
-
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Install Playwright and its dependencies
-RUN playwright install --with-deps chromium
 
 # copy built frontend files
 COPY --chown=$UID:$GID --from=build /app/build /app/build
