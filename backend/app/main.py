@@ -69,7 +69,7 @@ oauth_manager = OAuthManager(app)
 origins = [
     "http://localhost:8000",
     "http://localhost:5173",  # Vite dev server
-    "https://netacad.cisco.com",
+    "https://netacad-gradebook-manager.cisco.com",
 ]
 
 app.add_middleware(
